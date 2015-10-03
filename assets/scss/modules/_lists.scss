@@ -1,0 +1,36 @@
+.list {
+	margin-left: $padding;
+	margin-bottom: $padding * 2;
+}
+.list-dash {
+	li {
+		position: relative;
+		
+		&:before {
+			content: '-';
+			padding-right: $padding;
+			margin-left: - $padding;
+			display: inline-block;
+			position: absolute;
+
+		}
+	}
+}
+.list-arrow {
+	margin-left: $padding;
+	
+	li {
+		position: relative;
+		
+		&:before {
+			content: "\e602";
+			padding-right: $padding;
+			margin-left: - $padding;
+			display: inline-block;
+			position: absolute;
+			font-family: icomoon;
+			color: color(primary);
+
+		}
+	}
+}
