@@ -1,0 +1,46 @@
+.icon-open{
+	width: rem-calc(25);
+	height: rem-calc(25);
+	border-radius: 50%;
+	border: rem-calc(1.5) solid color(primary);
+	display: inline-block;
+	position: relative;
+
+	@media #{$medium-up} {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	&:before, &:after {
+		content: '';
+		width: 60%;
+		height: rem-calc(1.5);
+		background-color: color(primary);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&:after {
+		width: rem-calc(2);
+		height: 60%;
+	}
+
+	&-alt {
+		border: rem-calc(1.5) solid color(white);
+
+		&:before, &:after {
+			background-color: color(white);
+		}
+	}
+}
+.icon-close {
+	@extend .icon-open;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}

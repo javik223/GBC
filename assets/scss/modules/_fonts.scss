@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:font-url('icomoon.eot?-glf8ij');
-	src:font-url('icomoon.eot?-glf8ij#iefix') format('embedded-opentype'),
-		font-url('icomoon.ttf?-glf8ij') format('truetype'),
-		font-url('icomoon.woff?-glf8ij') format('woff'),
-		font-url('icomoon.svg?-glf8ij#icomoon') format('svg');
+	src:font-url('icomoon.eot?xzxnu0');
+	src:font-url('icomoon.eot?xzxnu0#iefix') format('embedded-opentype'),
+		font-url('icomoon.ttf?xzxnu0') format('truetype'),
+		font-url('icomoon.woff?xzxnu0') format('woff'),
+		font-url('icomoon.svg?xzxnu0#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,4 +25,23 @@
 
 .icon-linkedin:before {
 	content: "\e600";
+}
+.icon-caret-left, .icon-caret-right {
+	position: relative;
+	top: rem-calc(2);
+	padding-right: $padding * 0.5;
+}
+
+.icon-caret-right {
+	padding-right: 0;
+	padding-left: $padding * 0.5;
+}
+.icon-caret-right:before {
+	content: "\e902";
+}
+.icon-caret-left:before {
+	content: "\e901";
+}
+.icon-linkedin:before {
+	content: "\e900";
 }

@@ -16,11 +16,15 @@
 	"modules/forms",
 	"modules/spinner",
 	"modules/fonts",
-	"modules/loader";
+	"modules/loader",
+	"modules/layout"
+	;
 
 // Components
 @import 
-	"components/hero"
+	"components/hero",
+	"components/accordion",
+	"components/truncatedbox"
 	;
 
 // Sections
@@ -34,4 +38,296 @@
 html, body {
 	width: 100% !important;
 	overflow-x: hidden;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
+}
+
+// General Styles ----------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
+.side-image-wrapper {
+	max-height: rem-calc(350);
+	overflow-y: hidden;
+
+	@media #{$medium-up} {
+		position: absolute;
+		right: 0;
+		top: 0;
+		max-width: 45%;
+		max-height: none;
+	}
+
+	.careers & {
+		height: 100%;
+
+		img {
+			@media #{$medium-only} {
+				height: 100%;
+				max-width: none;
+			}
+
+			@media #{$large-up} {
+				height: 100%;
+				max-width: none;
+			}
+		}
+	}
+}
+
+.careers {
+	@media #{$large-up} {
+		padding-bottom: $padding * 10;
+	}
+	.content {
+		padding-top: $padding;
+	}
+}
+
+// The team  ---------------------------------------------------------------------------------------------
+.team {
+	&_member {
+		@extend .s-6-12;
+		/* @extend .m-4-12; */
+		@extend .l-3-12;
+		overflow: hidden;
+		position: relative;
+		color: color(white);
+		transition: opacity 1s ease-out, transform 0.5s ease-out;
+		transform: center center;
+		background-color: color(white);
+		padding: rem-calc(1);
+
+		@media #{$medium-only} {
+			padding-bottom: 0;
+
+			&:nth-child(2n+1) {
+				padding-left: 0;
+				clear: left;
+			}
+
+			&:nth-child(2n) {
+				padding-right: 0;
+			}
+		}
+
+		@media #{$small-only} {
+			&:nth-child(2n+1) {
+				padding-left: 0;
+				clear: left;
+			}
+
+			&:nth-child(2n) {
+				padding-right: 0;
+			}
+		}
+
+		@media #{$large-up} {
+			&:nth-child(4n+1) {
+				padding-left: 0;
+				clear: left;
+			}
+
+			&:nth-child(4n) {
+				padding-right: 0;
+			}
+		}
+
+		&:last-child {
+			@extend .end;
+		}
+
+		&_profile {
+			width: 100%;
+			float: left;
+			position: absolute;
+			bottom: $padding;
+			left: 0;
+			padding-left: $padding;
+			padding-right: $padding;
+		}
+
+		&_name {
+			@extend .text-serif;
+			@extend .beta;
+			margin-bottom: 0 !important;
+			max-width: 80%;
+			position: relative;
+			line-height: 1;
+		}
+
+		&_designation {
+			@extend .text-sans;
+			text-transform: uppercase;
+			letter-spacing: rem-calc(3);
+			margin-bottom: 0;
+			position: relative;
+
+			@media #{$small-only} {
+				letter-spacing: rem-calc(1);
+				font-size: rem-calc(10) !important;
+			}
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.15);
+				filter: grayscale(0%);
+			}
+		}
+	}
+
+	&_image{
+		float: left;
+		overflow: hidden;
+	}
+
+	img {
+		filter: grayscale(90%);
+		transform-origin: top center;
+		transition: all 2s ease-in-out;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+	}
+
+	.overlay {
+		position: absolute;
+		background-image: linear-gradient(-180deg, rgba(35,109,197,0.00) 8%, #000000 100%);
+		height: 60%;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		padding: $padding;
+	}
+
+	.icon {
+		position: absolute;
+		right: $padding;
+		bottom: $padding;
+		backface-visibility: hidden;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	&-fade {
+		.team_member {
+			opacity: 0.1;
+		}
+	}
+
+	&-desktop {
+		.overlay {
+			visibility: hidden;
+		}
+	}
+
+	.active {
+		opacity: 1;
+		//transform: scale(1.05);
+		transform-orign: center center;
+		z-index: 10000;
+		box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.1);
+	}
+}
+
+
+
+// ----------------------------------------------
+.client-list {
+	text-align: center;
+	@extend .m-12-12;
+	//@extend .m-offset-1;
+	@extend .end;
+
+	img {
+		float: none;
+		display: inline-block;
+		padding: $padding;
+		height: rem-calc(150);
+	}
+}
+
+
+
+// Profile --------------------------------------------------------
+.side-content {
+	overflow: hidden;
+
+	@media #{$medium-only} {
+		max-width: 60%;
+		float: right;
+		margin-left: $padding;
+		padding-bottom: $padding;
+		position: relative;
+		margin-top: rem-calc(-170);
+
+		img {
+			float: right;
+			margin-right: -$padding * 2;
+		}
+	} 
+
+	@media #{$medium-up} {
+		
+	}
+
+	@media #{$large-up} {
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 60%;
+		max-width: 40%;
+	}
+}
+
+
+
+// Areas of inter5st -------------------------------------------------------------------------------------------------------------
+.areas-of-interest {
+	width: 100%;
+	float: left;
+	text-align: center;
+	margin-top: $padding;
+	padding-top: $padding;
+	position: relative;
+
+	@media #{$medium-up} {
+		margin-top: $padding * 2;
+	}
+
+	&:before {
+		content: '';
+		width: rem-calc(100);
+		height: rem-calc(1);
+		background-color: lighten(color(gray-light), 30%);
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	.heading {
+		@extend .omega;
+		@extend .c-p;
+		letter-spacing: rem-calc(2);
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.list {
+		letter-spacing: rem-calc(1);
+		text-transform: uppercase;
+		margin-left: 0;
+
+		li {
+			margin-bottom: $padding * 0.5;
+			font-weight: 700;
+			color: lighten(color(gray-light), 25%);
+			font-size: 95%;
+		}
+	}
+}
+
+.disable-scroll {
+	overflow: hidden;
 }

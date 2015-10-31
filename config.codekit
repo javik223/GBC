@@ -2,6 +2,15 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19051",
 "files": {
+	"\/about.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/about.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/app.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -10,6 +19,127 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/fonts\/selection.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/fonts\/selection.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/fonts\/selection-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/assets\/img\/1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 160727,
+		"inputAbbreviatedPath": "\/assets\/img\/1.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80181,
+		"inputAbbreviatedPath": "\/assets\/img\/2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 52525,
+		"inputAbbreviatedPath": "\/assets\/img\/3.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 50039,
+		"inputAbbreviatedPath": "\/assets\/img\/4.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 50341,
+		"inputAbbreviatedPath": "\/assets\/img\/5.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46140,
+		"inputAbbreviatedPath": "\/assets\/img\/6.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39433,
+		"inputAbbreviatedPath": "\/assets\/img\/7.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/baker-hughes.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6151,
+		"inputAbbreviatedPath": "\/assets\/img\/baker-hughes.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/baker-hughes.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/careers.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 493236,
+		"inputAbbreviatedPath": "\/assets\/img\/careers.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/careers.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/Client-group.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71072,
+		"inputAbbreviatedPath": "\/assets\/img\/Client-group.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Client-group.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/assets\/img\/contact-bg.jpg": {
 		"fileType": 16384,
@@ -51,6 +181,83 @@
 		"initialSize": 5.00585e+06,
 		"inputAbbreviatedPath": "\/assets\/img\/gbc-modern-law-firm.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/gbc-modern-law-firm.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/gbenga-biobaku.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 474634,
+		"inputAbbreviatedPath": "\/assets\/img\/gbenga-biobaku.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/gbenga-biobaku.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/gbenga.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 43750,
+		"inputAbbreviatedPath": "\/assets\/img\/gbenga.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/gbenga.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/mobil.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5704,
+		"inputAbbreviatedPath": "\/assets\/img\/mobil.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/mobil.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/nnpc.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6079,
+		"inputAbbreviatedPath": "\/assets\/img\/nnpc.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/nnpc.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/parker-drilling.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5874,
+		"inputAbbreviatedPath": "\/assets\/img\/parker-drilling.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/parker-drilling.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/sonatrech.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4350,
+		"inputAbbreviatedPath": "\/assets\/img\/sonatrech.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/sonatrech.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/strabag.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5143,
+		"inputAbbreviatedPath": "\/assets\/img\/strabag.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/strabag.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -273,6 +480,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/assets\/scss\/components\/_accordion.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/scss\/components\/_accordion.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_accordion.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/assets\/scss\/components\/_hero.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -282,6 +505,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/scss\/components\/_hero.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_hero.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/assets\/scss\/components\/_truncatedbox.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/scss\/components\/_truncatedbox.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_truncatedbox.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -426,6 +665,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/scss\/modules\/_icons.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_icons.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/assets\/scss\/modules\/_layout.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/scss\/modules\/_layout.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/_layout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -690,6 +945,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/careers.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/careers.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/config.rb": {
 		"fileType": 131072,
 		"ignore": 0,
@@ -704,6 +968,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/contact.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/expertise.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/expertise.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -735,12 +1008,39 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/kit\/about.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/about.kit",
+		"outputAbbreviatedPath": "\/about.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
+		},
+	"\/kit\/careers.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/careers.kit",
+		"outputAbbreviatedPath": "\/careers.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
+		},
 	"\/kit\/contact.kit": {
 		"fileType": 2048,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/kit\/contact.kit",
 		"outputAbbreviatedPath": "\/contact.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1
+		},
+	"\/kit\/expertise.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/expertise.kit",
+		"outputAbbreviatedPath": "\/expertise.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},
@@ -753,65 +1053,20 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1
 		},
-	"\/subsidiaries\/cetexploration-and-production.html": {
-		"fileType": 8192,
-		"ignore": 1,
+	"\/kit\/profile.kit": {
+		"fileType": 2048,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cetexploration-and-production.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/kit\/profile.kit",
+		"outputAbbreviatedPath": "\/profile.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 1
 		},
-	"\/subsidiaries\/cetgas.html": {
+	"\/profile.html": {
 		"fileType": 8192,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cetgas.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/subsidiaries\/cetlogistix.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cetlogistix.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/subsidiaries\/cetlogistix2.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cetlogistix2.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/subsidiaries\/cetmarine.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cetmarine.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/subsidiaries\/cetocean.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cetocean.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/subsidiaries\/cettrading.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/subsidiaries\/cettrading.html",
+		"inputAbbreviatedPath": "\/profile.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -819,7 +1074,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Javik",
+"lastSavedByUser": "Victory James Ugwudike",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -1004,7 +1259,7 @@
 	"javascriptCreateSourceMap": 1,
 	"javascriptOutputStyle": 1,
 	"javascriptSyntaxCheckerStyle": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "TweenMax, Back, TimelineMax, Bounce, Expo, WURFL",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,

@@ -1,18 +1,10 @@
 .button {
-	padding: $padding * 0.5 $padding;
-	background-color: color(primary);
-	color: color(white);
+	padding: $padding * 0.05 $padding;
+	font-family: $font-family-sans-serif;
 	text-decoration: none;
-	font-weight: 400;
-
-	&:hover {
-		background-color: color(primary, darker);
-	}
-
-	&-arrow-right {
-		&:after {
-			content: "→";
-			padding-left: $padding * 2;
-		}
-	}
+	background-color: lighten(color(gray-light), 20%);
+	display: inline-block;
+	color: color(white);
+	border-radius: rem-calc(40);
+	font-size: rem-calc(12);
 }

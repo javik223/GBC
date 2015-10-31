@@ -3,8 +3,8 @@
 $headers: (
 	h1: (fontSize: 48, lineHeight: 52, mFontSize: 48, mLineHeight: 52, sFontSize: 36, sLineHeight: 40),
 	h2: (fontSize: 36, lineHeight: 43, mFontSize: 30, mLineHeight: 38, sFontSize: 24, sLineHeight: 32),
-	h3: (fontSize: 22, lineHeight: 32, mFontSize: 20, mLineHeight: 32, sFontSize: 18, sLineHeight: 28),
-	h4: (fontSize: 18, lineHeight: 28, mFontSize: 18, mLineHeight: 28, sFontSize: 16, sLineHeight: 24),
+	h3: (fontSize: 22, lineHeight: 32, mFontSize: 24, mLineHeight: 32, sFontSize: 18, sLineHeight: 28),
+	h4: (fontSize: 18, lineHeight: 30, mFontSize: 20, mLineHeight: 30, sFontSize: 14, sLineHeight: 24),
 	h5: (fontSize: 14, lineHeight: 20, mFontSize: 12, mLineHeight: 16, sFontSize: 12, sLineHeight: 16),
 );
 
@@ -37,6 +37,7 @@ body, p {
 	font-family: $base-font-family;
 	font-weight: 200;
 	letter-spacing: 0.1px;
+	color: lighten(color(gray-light), 20%);
 
 	@media #{$medium-up} {
 		font-size: $base-font-size;
@@ -75,6 +76,20 @@ em {
 .text-small {
 	font-size: 80%;
 	line-height: 1.5;
+}
+.text-serif {
+	font-family: $font-family-serif;
+
+	* {
+		font-family: $font-family-serif;
+	}
+}
+.text-sans {
+	font-family: $font-family-sans-serif;
+
+	* {
+		font-family: $font-family-sans-serif;
+	}
 }
 //Change text color to primary color
 .c-p {

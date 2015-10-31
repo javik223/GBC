@@ -8,7 +8,7 @@
 		
 		&:before {
 			content: '-';
-			padding-right: $padding;
+			padding-right: $padding * 0.5;
 			margin-left: - $padding;
 			display: inline-block;
 			position: absolute;
@@ -23,7 +23,7 @@
 		position: relative;
 		
 		&:before {
-			content: "\e602";
+			content: "»";
 			padding-right: $padding;
 			margin-left: - $padding;
 			display: inline-block;
@@ -31,6 +31,18 @@
 			font-family: icomoon;
 			color: color(primary);
 
+		}
+	}
+}
+
+.list-experiences {
+	margin-left: 0;
+
+	li {
+		margin-bottom: $padding;
+
+		@media #{$medium-up} {
+			margin-bottom: $padding * 1.5;
 		}
 	}
 }
