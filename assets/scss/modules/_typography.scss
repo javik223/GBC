@@ -45,7 +45,7 @@ body, p {
 	}
 }
 h1,h2,h3,h4,h5,h6 {
-	font-weight: 400;
+	font-weight: bold;
 }
 p {
 	margin-bottom: $base-line-height;
@@ -57,15 +57,6 @@ strong {
 }
 em {
 	font-style: italic;
-}
-
-// Margin and paddings
-// No-margin top
-.nmt {
-	margin-top: 0;
-}
-.nmb {
-	margin-bottom: 0 !important;
 }
 .text-center {
 	text-align: center;
@@ -91,7 +82,60 @@ em {
 		font-family: $font-family-sans-serif;
 	}
 }
-//Change text color to primary color
+
+// Font Weights
+.text-bold {
+	font-weight: bold;
+}
+
+// Text Alignment
+.text-center {
+	text-align: center !important;
+}
+.s-text-center {
+	@media #{$small-only} {
+		text-align: center !important;
+	}
+}
+.m-text-center {
+	@media #{$medium-only} {
+		text-align: center !important;
+	}
+}
+.sm-text-center {
+	@extend .s-text-center;
+	@extend .m-text-center;
+}
+
+.text-right {
+	text-align: right !important;
+}
+.s-text-right {
+	@media #{$small-only} {
+		text-align: right !important;
+	}
+}
+.m-text-right {
+	@media #{$medium-only} {
+		text-align: right !important;
+	}
+}
+.l-text-right {
+	@media #{$large-up} {
+		text-align: right !important;
+	}
+}
+
+[class*="-center"] {
+	img {
+		float: none;
+	}
+}
+// Letter spacing
+.text-space-1 {
+	letter-spacing: rem-calc(1);
+}
+// Change text color to primary color
 .c-p {
 	color: color(primary);
 }

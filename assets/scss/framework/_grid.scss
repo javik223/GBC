@@ -1,5 +1,5 @@
 * {
-	@include box-sizing( border-box );
+	box-sizing: border-box;
 }
 .container {
 	width: 100%;
@@ -18,6 +18,18 @@
 				padding-right: $padding * 2;
 			}
 		}
+	}
+}
+
+// Modified row
+.row-main {
+	@media #{$medium-up} {
+		width: 100%;
+		margin: auto auto;
+	}
+
+	@media #{$large-up} {
+		width: 90%;
 	}
 }
 .collapse {
@@ -70,6 +82,44 @@
 	}
 }
 
+// Alternate grid 10 columns
+// -----------------------------------------------------------------
+
+@for $i from 0 through $grid-columns-alt {
+	.s-#{$i}-#{$grid-columns-alt} {
+		width: ( $i / $grid-columns-alt ) * 100%;
+		float: left;
+	}
+	.s-offset-#{$i} {
+		margin-left: ( $i / $grid-columns-alt ) * 100%;
+	}
+}
+
+@media #{$medium-up} {
+	@for $i from 0 through $grid-columns-alt {
+		.m-#{$i}-#{$grid-columns-alt} {
+			width: ( $i / $grid-columns-alt ) * 100%;
+			float: left;
+		}
+		.m-offset-#{$i} {
+			margin-left: ( $i / $grid-columns-alt ) * 100%;
+		}
+	}
+}
+@media #{$large-up} {
+	@for $i from 0 through $grid-columns-alt {
+		.l-#{$i}-#{$grid-columns-alt} {
+			width: ( $i / $grid-columns-alt ) * 100%;
+			float: left;
+		}
+		.l-offset-#{$i} {
+			margin-left: ( $i / $grid-columns-alt ) * 100%;
+		}
+	}
+}
+
+// -----------------------------------------------------------------
+
 //Extra padding for mobile and tablet
 .m-pad {
 	@media #{$small-only} {
@@ -85,20 +135,43 @@
 		padding-right: rem-calc(30) !important;
 	}
 }
-// Add normal Bottom Padding
+// Padding and Margin Styles
 .pbn {
-	padding-bottom: $padding;
+	padding-bottom: $padding !important;
 }
-// Add large Bottom Padding
-.pbb {
-	padding-bottom: $padding * 2;
+// Small padding bottom
+.pb-small {
+	padding-bottom: $padding !important;
+} 
+// Large Bottom Padding
+.pb-large {
+	padding-bottom: $padding * 2 !important;
+}
+// Remove padding from top
+.pt-0 {
+	padding-top: 0 !important;
+}
+// Remove padding from bottom
+.pb-0 {
+	padding-bottom: 0 !important;
+}
+// Remove margin from bottom
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+// Remove margin from top
+.mt-0 {
+	margin-top: 0 !important;
+}
+.mb-large {
+	margin-bottom: $padding * 2 !important;
 }
 
 // Visibility state on different devices
-// m - mobile, t - tablet, l - larged devices (desktop), mt - mobile and tablet
+// s - mobile, m - tablet, l - larged devices (desktop), sm - mobile and tablet
 .s-hide {
 	@media #{$small-only} {
-		display: none;
+		display: none !important;
 	}
 }
 .m-hide {
@@ -112,22 +185,11 @@
 	}
 }
 .sm-hide {
-	display: none;
-
-	@media #{$large-up} {
-		display: auto;
-	}
+	@extend .s-hide;
+	@extend .m-hide;
 }
 .ml-hide {
 	@media #{$medium-up} {
 		display: none;
 	}
-}
-
-// Floats
-.left {
-	float: left;
-}
-.right {
-	float: right;
 }

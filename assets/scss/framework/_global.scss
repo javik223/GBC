@@ -23,16 +23,6 @@ $base-font-size: 100% !default;
 $base-line-height: 1.5 !default;
 
 
-// @mixins
-//
-// We use this to add box-sizing across browser prefixes
-@mixin box-sizing($type:border-box) {
-  -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
-	   -moz-box-sizing: $type; // Firefox < 29
-	        box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
-}
-
-
 // We use this to do clear floats
 @mixin clearfix {
   &:before, &:after { content: " "; display: table; }
@@ -108,7 +98,7 @@ $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !defaul
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
 // Legacy
-$small: $medium-up;
+$small: $small-up;
 $medium: $medium-up;
 $large: $large-up;
 
