@@ -110,7 +110,7 @@ $color: #b3e5fc;
 		@media #{$small-only} {
 			position: absolute;
 			left: 0;
-			top: rem-calc(67);
+			top: rem-calc(47);
 			width: 100%;
 			background-color: adjust-hue(color(primary), 10%);
 			transform-origin: top center;

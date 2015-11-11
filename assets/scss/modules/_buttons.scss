@@ -7,4 +7,20 @@
 	color: color(white);
 	border-radius: rem-calc(40);
 	font-size: rem-calc(12);
+
+	.icon-caret-right, .icon-caret-left {
+		font-size: rem-calc(15);
+		position: relative;
+		top: rem-calc(2);
+		margin-top: rem-calc(-2);
+		display: inline-block;
+	}
+
+	.icon-caret-right {
+		padding-left: $padding * 0.5;
+	}
+
+	.icon-caret-left {
+		padding-right: $padding * 0.5;
+	}
 }

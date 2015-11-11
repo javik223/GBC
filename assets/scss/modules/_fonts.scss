@@ -23,24 +23,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-linkedin:before {
-	content: "\e600";
-}
-.icon-caret-left, .icon-caret-right {
-	position: relative;
-	top: rem-calc(2);
-	padding-right: $padding * 0.5;
-}
-
-.icon-caret-right {
-	padding-right: 0;
-	padding-left: $padding * 0.5;
-}
 .icon-caret-right:before {
 	content: "\e902";
 }
 .icon-caret-left:before {
 	content: "\e901";
+}
+.icon-download:before {
+	content: "\e903";
 }
 .icon-linkedin:before {
 	content: "\e900";

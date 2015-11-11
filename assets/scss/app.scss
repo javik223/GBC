@@ -281,6 +281,194 @@ html, body {
 }
 
 
+// Publications ------------------------------------------------------------------------------------------------------------------
+.publications {
+	> div {
+		@extend .col;
+		@extend .m-6-12;
+		@extend .l-4-12;
+		background-color: lighten(adjust-hue(color(primary), 5%), 2%);
+		border-bottom: rem-calc(1) solid color(white);
+		padding: $padding;
+		color: color(white);
+		position: relative;
+		min-height: rem-calc(350);
+
+		@media #{$medium-up} {
+			height: rem-calc(500);
+		}
+
+		p {
+			color: color(white);
+			@extend .text-sans;
+			font-size: 85%;
+			line-height: 1.6;
+			opacity: 0.8;
+		}
+
+		@media #{$small-only} {
+			border-bottom: rem-calc(1) solid color(white);
+		}
+
+		@media #{$medium-only} {
+			&:nth-child(2n+2){
+				border-right: none;
+				border-left: rem-calc(2) solid color(white);
+				box-sizing: border-box;
+			}
+
+		}
+		
+		@media #{$medium-up} {
+			padding: $padding * 2;
+		}
+
+		@media #{$large-up} {
+			&:nth-child(3n+2){
+				border-right: rem-calc(1) solid color(white);
+				border-left: rem-calc(1) solid color(white);
+				box-sizing: border-box;
+			}
+		}
+
+	}
+
+	.publication_title {
+		@extend .text-serif;
+		@extend .gamma;
+	}
+
+	.publication_donwload-link {
+		font-weight: bold;
+		position: absolute;
+		bottom: $padding;
+		left: $padding;
+		text-decoration: none;
+		color: color(white);
+
+		@media #{$medium-up} {
+			bottom: $padding * 2;
+			left: $padding * 2;
+		}
+
+		&:hover {
+			color: lighten(color(primary), 40%);
+		}
+	}
+}
+
+.s-hide {
+	@media #{$small-only} {
+		display: none;
+	}
+}
+
+.s-center {
+	@media #{$small-only} {
+		text-align: center;
+
+		* {
+			float: none;
+			margin-top: $padding;
+		}
+	}
+}
+
+// Cases --------------------------------------------------------------------------------------
+.cases {
+	.case {
+		@extend .col;
+		@extend .s-6-12;
+		@extend .m-4-12;
+		@extend .l-3-12;
+		background-color: lighten(adjust-hue(color(primary), 5%), 2%);
+		border-bottom: rem-calc(1) solid color(white);
+		border-right: rem-calc(1) solid color(white);
+		min-height: rem-calc(250);
+		padding-bottom: $padding * 2;
+		color: color(white);
+		padding: $padding;
+		box-sizing: border-box;
+		text-decoration: none;
+		transition: background-color 0.3s ease-in-out;
+
+		@media #{$small-only} {
+			&:nth-child(2n) {
+				border-right: none;
+			}
+		}
+
+		@media #{$medium-only} {
+			&:nth-child(3n) {
+				border-right: none;
+			}
+		}
+
+		@media #{$large-up} {
+			&:nth-child(4n) {
+				border-right: none;
+			}
+		}
+
+		@media #{$medium-up} {
+			padding: $padding * 2;
+			min-height: rem-calc(320);
+		}
+
+		&:hover {
+			background-color: adjust-hue(color(primary), 6%);
+		}
+	}
+}
+
+.case {
+	position: relative;
+
+	&_title {
+		@extend .gamma;
+		@extend .text-serif;
+		@extend .nmb;
+		padding-bottom: $padding * 0.2;
+		line-height: 1.2;
+	}
+
+	&_client {
+		@extend .text-sans;
+		text-transform: uppercase;
+		letter-spacing: rem-calc(1);
+		color: color(white);
+		font-size: rem-calc(12);
+		line-height: 1.6;
+		margin-top: 0;
+
+		@media #{$medium-up} {
+			font-size: rem-calc(14);
+			line-height: 1.6;
+		}
+	}
+
+	&_view {
+		position: absolute;
+		bottom: $padding;
+		left: $padding;
+		font-size: rem-calc(12);
+		text-transform: uppercase;
+		letter-spacing: rem-calc(1);
+
+		@media #{$medium-up} {
+			bottom: $padding * 2;
+			left: $padding * 2;
+			font-size: rem-calc(14);
+		}
+
+		.icon {
+			display: inline-block;
+			position: relative;
+			top: rem-calc(2);
+		}
+
+	}
+}
 
 // Areas of inter5st -------------------------------------------------------------------------------------------------------------
 .areas-of-interest {
