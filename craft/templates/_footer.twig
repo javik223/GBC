@@ -1,0 +1,48 @@
+<footer class="footer mt-pad">
+	<div class="row">
+		<div class="links">
+			<ul>
+				<li><a href="/" title="GBC Home">Home</a></li>
+				<li><a href="/about" title="About GBC - Gbenga Biobaku &amp; Co.">About</a></li>
+				<li><a href="/about#team" title="The GBC Team">The Team</a></li>
+				<li><a href="/publications" title="GBC Publications">Publications</a></li>
+				<li><a href="/contact" title="Contact GBC">Contact</a></li>
+				<li><a href="/careers" title="GBC Careers">Careers</a></li>
+			</ul>
+			<ul>
+				<li><a href="/expertise" title="Energy and Projects Expertise">Expertise</a></li>
+				{% set expertise = craft.entries.section('expertise').first() %}
+				{% if expertise|length %}
+						{% set expertise = expertise.Ex %}
+
+						{% for item in expertise %}
+						   <li><a href="/expertise#{{ item.exTitle|striptags|replace({'&': '', ' ': '-'}) }}" title="{{ item.exTitle }}">{{ item.exTitle }}</a></li>
+						{% endfor %}
+				{% endif %}
+			</ul>
+		</div>
+
+		<div class="social-and-awards">
+			<div class="social"><span class="icon-linkedin">&nbsp;</span></div>
+
+			<div class="awards">
+			<img src="/assets/img/IFLR2015.jpg" alt="IFLR2015">
+			<img src="/assets/img/corporateintl-global-award-winner-2010.png" alt="Corporate INTL Global Awards 2010 - Business formation legal advisory firm of the year in Nigeria" width="130"></div>
+		</div>
+	</div>
+
+	<div class="row bottom">
+		<ul>
+			<li><a href="/sitemap" title="Sitemap">Sitemap</a></li>
+			<li><a href="/site-credits" title="Site-Credits - W&amp;S">Credits</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/20140415/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
+{{ getFootHtml() }}
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

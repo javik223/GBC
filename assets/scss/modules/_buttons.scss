@@ -7,6 +7,7 @@
 	color: color(white);
 	border-radius: rem-calc(40);
 	font-size: rem-calc(12);
+	transition: color 0.6s ease-out;
 
 	.icon-caret-right, .icon-caret-left {
 		font-size: rem-calc(15);
@@ -22,5 +23,13 @@
 
 	.icon-caret-left {
 		padding-right: $padding * 0.5;
+	}
+
+	&-large {
+		font-size: rem-calc(16);
+	}
+
+	&:hover {
+		background-color: color(primary);
 	}
 }

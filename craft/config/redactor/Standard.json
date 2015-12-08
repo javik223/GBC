@@ -1,0 +1,5 @@
+{
+	"buttons": ["format","bold","italic","lists","image","file","link","video","horizontalrule"],
+	"plugins": ["source","video","fullscreen"],
+	"toolbarFixed": true,
+}

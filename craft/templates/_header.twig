@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        {% include '_seo' %}
+        <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
+        <script src="https://use.typekit.net/chx6pfs.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <link rel="stylesheet" href="/assets/css/app.css">
+        {{ getHeadHtml() }}
+    </head>
+    <body>
+	<header class="header">
+		<div class="row">
+			<nav class="nav">
+			<div class="menu mt-pad">
+		        <div class="icon-circle"></div>
+		        <div class="icon"></div>
+		     </div>
+			{{ craft.amNav.getNav("main", {
+				class: 'jsMenuElem',
+				classActive: 'active'
+			}) }}
+			</nav>
+
+			<div class="logo mt-pad">
+				<a href="/" title="GBC Biobaku &amp; Co.">
+					<img src="/assets/img/GBC-Gbenga-Biobaku-&-Co.svg" alt="GBC - Gbenga Biokbaku & Co" width="200">
+				</a>
+			</div>
+		</div>
+	</header>

@@ -1,0 +1,69 @@
+{% extends '_layout' %}
+{% block content %}
+	<div class="container container-extra-pad">
+		<div class="pbb"></div>
+		<div class="row">
+			<div class=" col l-10-12 l-offset-1 end text-center">
+				<h1 class="omega text-serif m-10-12 m-offset-1 end mt-pad pbb">
+					{{ entry.intro|striptags }}
+				</h1>
+
+				<div class="row">
+
+				{% set expertise = entry.Ex %}
+					{% for expertise in expertise %}
+					    <div class="accordion" id="{{ expertise.exTitle|striptags|replace({'&': '', ' ': '-'}) }}">
+					    	<h1 class="accordion_header">
+					    		{{ expertise.exTitle }}<span class="icon icon-open icon-open-alt"></span>
+					    	</h1>
+
+					    	<div class="accordion_content">
+					    		<div>
+									{{ expertise.exContent }}
+
+									{% set areasOfInterest = expertise.exAreasOfInterest %}
+									{% if areasOfInterest|length %}
+									<section class="areas-of-interest">
+										<h3 class="heading">Areas of Interest</h3>
+										<ul class="list">
+											{% for row in areasOfInterest %}
+											 <li>{{ row.item }}</li>
+											{% endfor %}
+										</ul>
+									</section>
+									{% endif %}
+					    		</div>
+					    	</div>
+					    </div>
+					{% endfor %}
+				</div>
+
+				<div class="pbb"></div>
+				<div class="row container-extra-pad mt-pad">
+					<div class="col m-8-12 m-offset-2 end">
+						<h1 class="c-p beta pbb">Relevant Experiences</h1>
+
+						<div class="omega text-serif">
+							{{ entry.relevantExperiencesIntro }}
+						</div>
+
+						{% set relevantExperiences = entry.relevantExperiences %}
+						{% if relevantExperiences|length %}
+						<div class="truncated-box">
+							<ul class="list list-arrow list-experiences">
+
+							{% for row in relevantExperiences %}
+							    <li>{{ row.item }}</li>
+							{% endfor %}
+							</ul>
+							<div class="icon icon-expand"></div>
+
+							<div class="transparent-overlay"></div>
+						</div>
+						{% endif %}						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

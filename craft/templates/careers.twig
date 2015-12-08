@@ -1,0 +1,19 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="container container-gray container-extra-pad careers">
+		<div class="row">
+			<div class="col m-6-12 l-5-12 end">
+				<h1 class="beta c-p mt-pad">{{ entry.title }}</h1>
+
+				<div class="side-image-wrapper">
+					<img src="{{ entry.image.first().url() }}" alt="{{ entry.title }}">
+				</div>
+
+				<div class="content mt-pad">
+					{{ entry.bodyContent }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

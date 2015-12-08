@@ -1,0 +1,146 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="container container-extra-pad">
+		<div class="row mt-pad">
+			<div class="col m-4-12 s-hide">
+				<a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="col m-4-12 end">
+				<h1 class="c-p beta text-center nmb">The Team</h1>
+			</div>
+
+			{% set teamMembers = craft.entries.section('about').type('teamMember') %}
+			{% if teamMembers|length %}
+				<div class="col m-4-12 s-hide dropdown-wrapper dropdown-wrapper-right">
+					<a href="#" class="button right">Jump to Team Member<span class="icon icon-caret-right"></span></a>
+
+					<ul class="dropdown jsDropDown">
+						{% for member in teamMembers %}
+						    <li><a href="{{ member.url() }}" title="{{ member.title }}">{{ member.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+				
+		</div>
+	</div>
+
+	<div class="container container-gray container-extra-pad">
+		<div class="row">
+			<div class="col mt-pad">
+				<h1 class="nmb text-serif beta">{{ entry.title }}</h1>
+				<p class="text-sans">{{ entry.position|upper }}</p>
+			</div>
+
+			<div class="col l-6-12 end">
+				<div class="side-content">
+					<img src="{{ entry.image.first().url() }}" alt="{{ entry.title }}">
+				</div>
+				
+			
+				<div class="content mt-pad">
+					<p class="omega text-serif pbb">
+						{{ entry.intro }}
+					</p>
+					
+					{% set education = entry.education %}
+
+					{% if education|length %}
+						<h3 class="gamma">Education</h3>
+						<ul class="list list-dash">
+						{% for row in education %}
+						    <li>{{ row.item }}</li>
+						{% endfor %}
+						</ul>	
+					{% endif %}
+					
+					
+
+					<div class="row">
+						<div class="col m-6-12">
+
+						{% set expertise = entry.expertise %}
+
+						{% if expertise|length %}
+							<h3 class="gamma">Expertise</h3>
+							<ul class="list list-dash">
+							{% for row in expertise %}
+							    <li>{{ row.item }}</li>
+							{% endfor %}
+							</ul>	
+						{% endif %}
+
+						</div>
+
+						<div class="col m-6-12">
+							{% set memberships = entry.memberships %}
+
+							{% if memberships|length %}
+								<h3 class="gamma">Memberships</h3>
+								<ul class="list list-dash">
+								{% for row in memberships %}
+								    <li>{{ row.item }}</li>
+								{% endfor %}
+								</ul>	
+							{% endif %}
+						</div>
+
+						<div class="col m-6-12 end">
+							{% set consultancyRecord = entry.consultancyRecord %}
+
+							{% if consultancyRecord|length %}
+								<h3 class="gamma">Consultancy Record</h3>
+								<ul class="list list-dash">
+								{% for row in consultancyRecord %}
+								    <li>{{ row.item }}</li>
+								{% endfor %}
+								</ul>	
+							{% endif %}
+						</div>
+
+						<div class="col m-6-12 end">
+							{% set language = entry.languages %}
+
+							{% if language|length %}
+								<h3 class="gamma">Languages</h3>
+								<ul class="list list-dash">
+								{% for row in language %}
+								    <li>{{ row.item }}</li>
+								{% endfor %}
+								</ul>	
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container container-extra-pad">
+		<div class="row">
+			<div class="col m-8-12 end text-sans mt-pad">
+				{% set experiences = entry.experiences %}
+				{% if experiences | length %}
+					<h1 class="gamma">Select Experiences</h1>
+
+					{% for row in experiences %}
+					   <p>{{ row.item }}</p>
+					{% endfor %}	
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col m-8-12 end text-sans mt-pad">
+				{% set appointment = entry.appointments %}
+				{% if appointment | length %}
+					<h1 class="gamma">Appointments</h1>
+
+					{{ appointment }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+<div class="pbb">&nbsp;</div>
+{% endblock %}

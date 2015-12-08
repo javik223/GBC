@@ -1,0 +1,103 @@
+{% extends '_layout' %}
+{% includeCssFile "/assets/css/owl.carousel.css" %}
+{% includeCssFile "/assets/css/owl.theme.default.min.css" %}
+
+
+
+{% block content %}
+	<div class="container container-extra-pad">
+		<div class="row mt-pad">
+			<div class="col m-8-12 m-offset-2 l-6-12 l-offset-3 text-center end">
+				<div class="truncated-box">
+					<div>
+						{{ entry.aboutText }}
+
+						<p>&nbsp;</p>
+						<a href="/about/working-with-us" class="button button-large">Working with us<span class="icon icon-caret-right"></span></a>
+					</div>
+
+					<div class="icon icon-expand"></div>
+
+					<div class="transparent-overlay"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Team Members -->
+	<div class="container container-gray" id="team">
+		<div class="row">
+			<div class="col m-8-10 m-offset-2">
+				<h1 class="c-p beta text-center nmb">The Team</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container team">
+
+		<!-- Team Member Profile -->
+		{% set profiles = craft.entries.section('about').type('teamMember') %}
+		{% if profiles|length %}
+			{% for profile in profiles %}
+			    <div class="team_member"  vocab="http://schema.org/" typeof="Person">
+			    	<a href="{{ profile.url() }}" property="url">
+			    		<div class="team_member_image">
+			    			<img src="{{ profile.thumbnail.first().url() }}" alt="{{ profile.title }}" property="image" width="{{ profile.thumbnail.first().width() }}" height="{{ profile.thumbnail.first().height() }}">
+			    		</div>
+
+			    		<div class="overlay">
+			    			<div class="team_member_profile">
+			    				<h1 class="team_member_name" property="name">{{ profile.title }}</h1>
+
+			    				<p class="team_member_designation" property="jobTitle">{{ profile.position }}</p>
+
+			    				<div class="icon icon-open">	
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</a>
+			    </div>
+			{% endfor %}
+			<!-- Team Member Ends -->
+		{% endif %}
+	</div>
+
+
+	<!-- Clients -->
+
+	<div class="container container-extra-pad">
+		<div class="row mt-pad">
+			<div class="col m-6-12 m-offset-3 end text-center text-sans">
+				<h2 class="c-p">
+					Clients
+				</h2>
+
+				<p>
+					{{ entry.clientsText }}
+				</p>
+			</div>
+
+			<div class="client-list_wrapper">
+				<div class="client-list jsCarousel">
+					{% set clients = entry.clients %}
+					{% for client in clients %}
+					    <img src="{{ client.clientLogo.first().url() }}" alt="{{ client.clientName }}" width="{{ client.clientLogo.first().width() }}" height="{{ client.clientLogo.first().height() }}">
+					{% endfor %}
+				</div>
+
+				{# <div class="client-list_contrrols">
+					<div class="span icon icon-chevron-left"></div>
+					<div class="span icon icon-chevron-right"></div>
+				</div> #}
+			</div>
+		</div>
+	</div>
+
+
+	{# <div class="row text-center container-extra-pad">
+		<a href="/cases-and-results" class="button button-large">Cases &amp; Results<span class="icon icon-caret-right"></span></a>
+	</div> #}
+
+	{% includeJsFile "/assets/js/owl.carousel.min.js" %}
+	
+{% endblock %}

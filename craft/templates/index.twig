@@ -1,0 +1,25 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="hero hero-slider">
+		<div class="hero-slider_fixed-content">
+			<div class="row mt-pad">
+				<div class="m-11-12 l-6-12 end">
+					<h1>A modern law firm with a flair for business</h1>
+				</div>
+			</div>
+		</div>
+
+		{% set banners = entry.banners %}
+		{% if banners|length %}
+			<div class="hero-slider_container cycle-slideshow"  data-cycle-slides=".hero-slider_item">
+				{% for image in banners %}
+				    <div class="hero-slider_item">
+				    	<img src="{{ image.url() }}" alt="{{ image.title }}">
+				    </div>
+				{% endfor %}
+				<div class="cycle-pager"></div>
+			</div>
+		{% endif %}			
+	</div>
+{% endblock %}

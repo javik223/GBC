@@ -257,14 +257,73 @@ $(document).ready(function(){
 			TweenMax.set(icon, {autoAlpha: 0, xPercent: "200%"});
 
 			TweenMax.to(overlay, 0.6, {autoAlpha: 1});
-			TweenMax.to(name, 1, {autoAlpha: 1, yPercent: "0%", delay: 1, ease:Expo.easeOut, force3D: true});
-			TweenMax.to(designation, 0.7, {autoAlpha: 1, delay: 1.2, yPercent: "0%", force3D: true});
-			TweenMax.to(icon, 0.7, {autoAlpha: 1, delay: 1.2, xPercent: "0%", ease:Expo.easeOut, force3D: true});
+			TweenMax.to(name, 1.5, {autoAlpha: 1, yPercent: "0%", delay: 0.3, ease:Expo.easeOut, force3D: true});
+			TweenMax.to(designation, 0.7, {autoAlpha: 1, delay: 0.9, yPercent: "0%", force3D: true});
+			TweenMax.to(icon, 0.7, {autoAlpha: 1, delay: 0.9, xPercent: "0%", ease:Expo.easeOut, force3D: true});
 		};
 
 		if (self.options.container.length > 0) {
 			init();
 		}
+	}());
+
+	GBC.dropdown = (function() {
+		var dropdownElem = $(".jsDropDown"),
+			dropdownBtn = dropdownElem.parent().find('.button');
+
+		if (!dropdownElem) {
+			return;
+		}
+
+		var init = function() {
+			dropdownElem.each(function(){
+				var $this = $(this);
+
+				// Confirm if the height of the dropdown element is handcoded
+				// If it's not, hardcode it
+
+				if (!$this.data('height')) {
+					$this.css('display', 'block');
+					$this.data('height', $this.height());
+					$this.css('height', 0);
+				}
+
+				// Make width of dropdown equal to control button
+				var dropdownBtn = $this.parent().find('.button'),
+					dropdownBtnWidth = dropdownBtn.outerWidth();
+
+				$this.css('min-width', dropdownBtnWidth);
+			});
+		};
+
+		var showDropdown = function(elem) {
+			var dropdownHeight = elem.data('height');
+			TweenMax.to(elem, 0.5, {height: dropdownHeight, ease:Power2.easeOut });
+			elem.data('visible', true);
+		};
+
+		var hideDropdown = function(elem) {
+			TweenMax.to(elem, 0.5, {height: 0, ease:Power2.easeOut });
+			elem.data('visible', false);
+		};
+
+		var toggleDropdown = function(elem) {
+			var isVisible = elem.data('visible');
+
+			if (isVisible === false || !isVisible) {
+				showDropdown(elem);
+			} else {
+				hideDropdown(elem);
+			}
+		};
+
+		init();
+
+		dropdownBtn.on('click', function(){
+			var elem = $(this).parent().find('.jsDropDown');
+			toggleDropdown(elem);
+		});
+
 	}());
 
 
@@ -274,4 +333,32 @@ $(document).ready(function(){
 
 	var TruncatedBox = new GBC.TruncatedBox();
 	TruncatedBox.init();
+
+	// Go back to previous page
+	var previousPageBtn = $(".prevPageBtn");
+	previousPageBtn.on('click', function(){
+		window.history.back();
+		return false;
+	});
+
+	// Activate cilent list carousel
+	var clients = $(".client-list.jsCarousel");
+
+	if (clients.length > 0) {
+		clients.owlCarousel({
+			loop: true,
+			margin: 0,
+			responsive: {
+				0: {
+					items: 2,
+				},
+				600: {
+					items: 3,
+				},
+				1000: {
+					items: 5
+				}
+			}
+		});
+	}
 });

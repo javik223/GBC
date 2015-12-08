@@ -1,0 +1,15 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="hero hero-with-suspended-content" style="background-image: url({{ entry.image.first().url() }});">
+			<div class="row">
+				<div class="content">
+					<h1 class="beta c-p">
+						{{ entry.title }}
+					</h1>
+
+					{{ entry.bodyContent }}
+				</div>
+			</div>
+		</div>
+{% endblock %}

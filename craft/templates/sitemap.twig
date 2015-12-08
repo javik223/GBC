@@ -1,0 +1,72 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="container container-extra-pad">
+		<div class="row mt-pad">
+			<div class="col m-4-12 s-hide">
+				<a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="col m-4-12 end">
+				<h1 class="c-p beta text-center nmb">Sitemap</h1>
+			</div>				
+		</div>
+	</div>
+
+	<div class="container container-gray container-extra-pad">
+		<div class="row text-center">
+			<ul class="site-links">
+				<li><a href="/" title="GBC Homepage">Home</a></li>
+				<li><a href="/about" title="About Gbenga Biobaku &amp; Co (GBC)">About GBC</a>
+					<ul>
+						<li><strong>TEAM MEMBERS</strong></li>
+
+						{% set teamMembers = craft.entries.section('about').type('teamMember') %}
+
+						{% for teamMember in teamMembers %}
+						    <li><a href="{{ teamMember.url() }}" title="{{ teamMember.title }}">{{ teamMember.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li><a href="/expertise" title="GBC's Expertise">Expertise</a>
+					{% set expertise = craft.entries.section('expertise').first() %}
+					{% if expertise|length %}
+						<ul>
+							{% set expertise = expertise.Ex %}
+
+							{% for item in expertise %}
+							   <li><a href="/expertise#{{ item.exTitle|striptags|replace({'&': '', ' ': '-'}) }}" title="{{ item.exTitle }}">{{ item.exTitle }}</a></li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+				<li><a href="/publications" title="Publications">Publications</a>
+					{% set publications = craft.entries.section('publications') %}
+
+					{% if publications|length %}
+					<ul>
+						{% for item in publications %}
+						   <li><a href="{{ item.publication.first().url() }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a></li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				</li>
+				{# <li><a href="/cases-and-results" title="Cases and Results">Cases &amp; Results</a>
+				
+					{% set casesAndResults = craft.entries.section('casesAndResults') %}
+
+					{% if casesAndResults|length %}
+						<ul>
+							{% for item in casesAndResults %}
+							   <li><a href="{{ item.url() }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a></li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li> #}
+				<li><a href="/contact" title="Contact GBC">Contact</a></li>
+				<li><a href="/careers" title="Careers at GBC">Careers</a></li>
+			</ul>
+		</div>
+	</div>
+
+<div class="pbb">&nbsp;</div>
+{% endblock %}

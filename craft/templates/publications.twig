@@ -1,0 +1,35 @@
+{% extends '_layout' %}
+{% block content %}
+	
+	<div class="container container-extra-pad container-gray">
+		<div class="row mt-pad">
+			<div class="col m-3-12 s-hide">
+				<a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="col m-6-12 end">
+				<h1 class="c-p beta text-center nmb">Publications</h1>
+			</div>
+
+			{# <div class="col m-3-12 s-hide">
+				<a href="/case-studies.html" class="button right">Jump to Category<span class="icon icon-caret-right"></span></a>
+			</div> #}
+		</div>
+	</div>
+
+	<div class="container publications">
+		{% set publications = craft.entries.section('publications') %}
+		{% for publication in publications %}
+		    <div>
+		    	<h1 class="publication_title">{{ publication.title }}</h1>
+
+		    	<p class="publication_synopsis">
+		    		{{ publication.summary }}
+		    	</p>
+
+		    	<a class="publication_donwload-link" href="{{ publication.publication.first().url() }}" target="_blank">
+		    		<span class="icon icon-download">&nbsp;</span>Download PDF
+		    	</a>
+		    </div>
+		{% endfor %}
+	</div>
+{% endblock %}
