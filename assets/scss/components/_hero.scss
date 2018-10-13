@@ -66,10 +66,22 @@
 			top: 0;
 			left: 0;
 			z-index: 1000;
-			padding-top: $padding * 3;
+			padding-top: $padding;
+			
 
 			* {
 				color: color(white);
+			}
+
+			@media #{$medium-up} {
+				padding-top: $padding * 3;
+			}
+
+			h1 {
+				@media #{$small-only} {
+					font-size: rem-calc(30);
+					line-height: 1.2;
+				}
 			}
 		}
 

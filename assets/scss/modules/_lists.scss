@@ -1,6 +1,8 @@
 .list {
 	margin-left: $padding;
 	margin-bottom: $padding * 2;
+	width: 100%;
+	float: left;
 }
 .list-dash {
 	li {
@@ -40,6 +42,9 @@
 
 	li {
 		margin-bottom: $padding;
+		float: left;
+		width: 100%;
+		padding-left: $padding;
 
 		@media #{$medium-up} {
 			margin-bottom: $padding * 1.5;

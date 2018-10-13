@@ -690,3 +690,64 @@ html, body {
 		}
 	}
 }
+
+
+// ----------------------------------------------
+.news-container {
+	> div {
+		@extend .col;
+		@extend .s-10-12;
+		@extend .m-8-12;
+		@extend .l-6-12;
+		@extend .s-offset-1;
+		@extend .m-offset-2;
+		@extend .l-offset-3;
+		background-color: color(white);
+		padding: rem-calc(16);
+		text-align: center;
+		margin-bottom: rem-calc(50);
+
+		h1 {
+			@extend h2;
+			@extend .text-serif;
+			color: color(primary);
+		}
+
+		@media #{$medium-up} {
+			padding: rem-calc(48);
+		}
+
+		@media #{$large-up} {
+			padding: rem-calc(64);
+		}
+
+		p {
+			@extend .text-sans;
+		}
+	}
+}
+
+.news-body {
+	@extend .col;
+	@extend .s-10-12;
+	@extend .s-offset-1;
+	@extend .m-8-12;
+	@extend .m-offset-2;
+	@extend .end;
+	padding-top: rem-calc(20);
+	
+	@extend .text-sans;
+
+	img {
+		padding-right: rem-calc(16);
+		padding-block-end: rem-calc(16);
+	}
+
+	@media #{$medium-up} {
+		padding-top: rem-calc(40);
+	}
+	
+	a {
+		color: color(primary);
+	}
+}
