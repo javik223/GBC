@@ -82,7 +82,7 @@ function pugTask() {
     .pipe(plumber({
       errorHandler: onError,
     }))
-    .pipe(pug())
+    .pipe(pug({ basedir: 'src/pug' }))
     .pipe(dest(settings.pug.dest));
 }
 
@@ -152,7 +152,7 @@ function imageTask() {
       imagemin.gifsicle({
         interlaced: true,
       }),
-      imagemin.jpegtran({
+      imagemin.mozjpeg({
         progressive: true,
       }),
       imagemin.optipng({
