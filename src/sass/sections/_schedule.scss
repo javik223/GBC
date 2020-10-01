@@ -1,0 +1,117 @@
+.upcoming-schedule {
+  background-color: $black;
+  color: $white;
+  vertical-align: middle;
+  line-height: 1;
+  padding: rem-calc(16) !important;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: gray;
+    }
+  }
+
+  @include breakpoint(medium up) {
+    padding: rem-calc(48) !important;
+  }
+
+  &__subheader {
+    font-weight: 400;
+    text-transform: uppercase;
+    vertical-align: middle;
+    border-left: 2px solid rgba($color: $white, $alpha: 0.3);
+    line-height: 1;
+    letter-spacing: rem-calc(4);
+    
+    small {
+      font-size: 50%;
+      line-height: 1;
+      vertical-align: middle;
+      padding-left: rem-calc(8);
+      color: rgba($color: $white, $alpha: 0.6);
+    }
+  }
+
+  &__nav {
+    text-align: right;
+    font-size: 50%;
+    padding-top: rem-calc(24);
+
+    span {
+      padding: rem-calc(4);
+    }
+  }
+
+  &__rail {
+    $childElement: '.upcoming-schedule__item';
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-left: 0;
+    margin-top: rem-calc(48);
+    margin-bottom: rem-calc(48);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__next {
+    color: rgba($color: $white, $alpha: 0.5);
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 60%;
+  }
+
+  &__item {
+    display: inline-flex;
+    border-right: 1px solid rgba($color: $white, $alpha: 0.1);
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+    &:last-of-type {
+      border-right: none;
+    }
+
+    @include breakpoint(medium up) {
+      width: 21%;
+    }
+
+    &__image {
+      width: 60%;
+      padding-top: 60%;
+      position: relative;
+      overflow: hidden;
+      margin-top: rem-calc(24);
+      margin-bottom: rem-calc(24);
+      border-radius: 50%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    &__title {
+      font-weight: 600;
+    }
+  }
+
+  &__date-time {
+    // display: inline-block;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 80%;
+    letter-spacing: rem-calc(2);
+    position: relative;
+    padding-left: rem-calc(4);
+    
+    &:before {
+    font-family: "iconfonts";
+    content: '\E001';
+    position: absolute;
+    left: rem-calc(-16);
+    }
+  }
+}

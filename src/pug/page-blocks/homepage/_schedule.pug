@@ -1,0 +1,69 @@
+.grid-container.full.upcoming-schedule
+    .grid-x
+      .cell.small-8
+        h2 Schedule <span class="upcoming-schedule__subheader"><small>Upcoming</small></span>
+        p.upcoming-schedule__next NEXT EVENT IN 2 HOURS 30 MINUTES
+      .cell.small-4.upcoming-schedule__nav
+        span.icon-left-arrow
+        span.icon.icon-right-arrow
+    ul.upcoming-schedule__rail
+      - 
+        const schedules = [
+          {
+            title: "Orange Culture",
+            image: "/assets/img/orange-culture.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Fruché",
+            image: "/assets/img/fruche.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Emmy Kasbit",
+            image: "/assets/img/emmy-kasbit.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Cynthia Abila",
+            image: "/assets/img/cynthia-abila.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Ugo Monye",
+            image: "/assets/img/ugo-monye.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Emmy Kasbit",
+            image: "/assets/img/emmy-kasbit.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Cynthia Abila",
+            image: "/assets/img/cynthia-abila.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+          {
+            title: "Ugo Monye",
+            image: "/assets/img/ugo-monye.png",
+            date: "OCT 20TH 2020",
+            time: "10:10AM"
+          },
+        ]
+      each schedule in schedules
+        li.upcoming-schedule__item
+          h5.upcoming-schedule__item__title #{schedule.title}
+          .upcoming-schedule__item__image
+            img(src=schedule.image, alt=schedule.title)
+          p.upcoming-schedule__date-time
+            small #{schedule.date}
+            br
+            small #{schedule.time}

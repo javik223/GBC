@@ -1,0 +1,38 @@
+footer.footer.grid-container
+  .grid-x.align-middle
+    -
+      const socialIcons = [
+        {
+          icon: "facebook",
+          link: "https://facebook.com"
+        },
+        {
+          icon: "twitter",
+          link: "https://twitter.com"
+        }, 
+        {
+          icon: "instagram",
+          link: "https://instagram.com"
+        }, 
+        {
+          icon: "youtube",
+          link: "https://youtube.com"
+        }
+      ]
+    .cell.social-icons.medium-6
+      each socialIcon in socialIcons
+        a(class="icon-" + socialIcon.icon + " icon-2x" href=socialIcon.link)
+      
+    .cell.sponsors.medium-6.medium-text-right
+      a(href="https://www.stylehousefiles.com" title="Style House Files")
+        img(src="/assets/img/style-house-files-logo.png", alt="Style House Files")
+      a(href="https://www.heineken.com" title="Heineken")
+        img(src="/assets/img/heineken-logo.png", alt="Heineken")
+  .grid-x.margin-vertical-3
+    include /data/_footer-links
+      each links in footerLinks
+        ul.cell.medium-4.large-3
+          each link in links
+            li: a(href=link.url) #{link.title}
+  .grid-x.copyright.padding-top-1
+    small &copy; 2020 Lagos Fashion Week. All rights reserved
