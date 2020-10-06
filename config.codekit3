@@ -9,14 +9,6 @@
 	],
 "creatorBuild": "32186",
 "files": {
-	"/about.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/about.html",
-		"oF": 0
-		},
 	"/assets/css/app.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1863,42 +1855,10 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/careers.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/careers.html",
-		"oF": 0
-		},
-	"/cases-and-results.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/cases-and-results.html",
-		"oF": 0
-		},
-	"/code-of-conduct.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/code-of-conduct.html",
-		"oF": 0
-		},
 	"/config.rb": {
 		"ft": 131072,
 		"oA": 0,
 		"oAP": "/config.rb",
-		"oF": 0
-		},
-	"/contact.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/contact.html",
 		"oF": 0
 		},
 	"/craft/.htaccess": {
@@ -36180,14 +36140,6 @@
 		"oAP": "/craft/web.config",
 		"oF": 0
 		},
-	"/expertise.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/expertise.html",
-		"oF": 0
-		},
 	"/gbc.sql": {
 		"cB": 0,
 		"ft": 8192,
@@ -36196,28 +36148,12 @@
 		"oAP": "/gbc.sql",
 		"oF": 0
 		},
-	"/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/index.html",
-		"oF": 0
-		},
 	"/kit/_footer.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/kit/_footer.html",
-		"oF": 0
-		},
-	"/kit/_header.kit": {
-		"cB": 0,
-		"ft": 2048,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/kit/_header.html",
 		"oF": 0
 		},
 	"/kit/about.kit": {
@@ -36292,14 +36228,6 @@
 		"oAP": "/publications.html",
 		"oF": 2
 		},
-	"/profile.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/profile.html",
-		"oF": 0
-		},
 	"/public/.htaccess": {
 		"cB": 0,
 		"ft": 8192,
@@ -36330,14 +36258,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/public/web.config",
-		"oF": 0
-		},
-	"/publications.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/publications.html",
 		"oF": 0
 		}
 	},
