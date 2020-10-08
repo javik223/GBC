@@ -9,6 +9,24 @@
 	],
 "creatorBuild": "32186",
 "files": {
+	"/about.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/about.html",
+		"oF": 0
+		},
+	"/assets/css/aboutpage-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/aboutpage-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/assets/css/app.css": {
 		"aP": 1,
 		"bl": 0,
@@ -27,6 +45,36 @@
 		"oAP": "/assets/css/app.css.map",
 		"oF": 0
 		},
+	"/assets/css/homepage-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/homepage-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/css/main-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/main-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/css/main.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/main-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/assets/css/owl.carousel.css": {
 		"aP": 1,
 		"bl": 0,
@@ -44,6 +92,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/owl.theme.default.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/assets/css/teampage-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/assets/css/teampage-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -88,6 +146,76 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/assets/icons/business-advisory.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/business-advisory.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/corporate.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/corporate.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/ip.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/ip.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/litigation.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/litigation.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/oil-and-gas.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/oil-and-gas.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/power.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/power.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/search.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/images/1.jpg": {
 		"ft": 16384,
@@ -331,6 +459,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/award-iflir-2015.png": {
+		"ft": 32768,
+		"iS": 11101,
+		"oA": 0,
+		"oAP": "/assets/images/award-iflir-2015.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/award-tag-law.png": {
+		"ft": 32768,
+		"iS": 40719,
+		"oA": 0,
+		"oAP": "/assets/images/award-tag-law.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/ayoade-oluwasanmi.jpg": {
 		"ft": 16384,
 		"iS": 208593,
@@ -385,6 +535,27 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/assets/images/blue-stripes.png": {
+		"ft": 32768,
+		"iS": 34738,
+		"oA": 0,
+		"oAP": "/assets/images/blue-stripes.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/blue-stripes.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/blue-stripes.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/images/careers.jpg": {
 		"ft": 16384,
@@ -584,6 +755,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/fiber.png": {
+		"ft": 32768,
+		"iS": 830286,
+		"oA": 0,
+		"oAP": "/assets/images/fiber.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/gbc-modern-law-firm-business-lagos-skyline.jpg": {
 		"ft": 16384,
 		"iS": 169592,
@@ -713,6 +895,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/map.png": {
+		"ft": 32768,
+		"iS": 69091,
+		"oA": 0,
+		"oAP": "/assets/images/map.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/nkoyo-rapu.jpg": {
 		"ft": 16384,
 		"iS": 187804,
@@ -744,6 +937,50 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/publication-1.png": {
+		"ft": 32768,
+		"iS": 132301,
+		"oA": 0,
+		"oAP": "/assets/images/publication-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/publication-2.png": {
+		"ft": 32768,
+		"iS": 101159,
+		"oA": 0,
+		"oAP": "/assets/images/publication-2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/publication-3.png": {
+		"ft": 32768,
+		"iS": 128807,
+		"oA": 0,
+		"oAP": "/assets/images/publication-3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/publication-4.png": {
+		"ft": 32768,
+		"iS": 112824,
+		"oA": 0,
+		"oAP": "/assets/images/publication-4.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/images/sandra-asuzu.jpg": {
@@ -788,6 +1025,94 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/team/ayoade-oluwasanmi.png": {
+		"ft": 32768,
+		"iS": 187689,
+		"oA": 0,
+		"oAP": "/assets/images/team/ayoade-oluwasanmi.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/edward-cruz.png": {
+		"ft": 32768,
+		"iS": 149162,
+		"oA": 0,
+		"oAP": "/assets/images/team/edward-cruz.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/gbenga-biobaku.png": {
+		"ft": 32768,
+		"iS": 181103,
+		"oA": 0,
+		"oAP": "/assets/images/team/gbenga-biobaku.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/ijeoma-abalogu.png": {
+		"ft": 32768,
+		"iS": 198521,
+		"oA": 0,
+		"oAP": "/assets/images/team/ijeoma-abalogu.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/lola-ogunmodede.png": {
+		"ft": 32768,
+		"iS": 155092,
+		"oA": 0,
+		"oAP": "/assets/images/team/lola-ogunmodede.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/nkoyo-rapu.png": {
+		"ft": 32768,
+		"iS": 186433,
+		"oA": 0,
+		"oAP": "/assets/images/team/nkoyo-rapu.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/okey-nwanya.png": {
+		"ft": 32768,
+		"iS": 175385,
+		"oA": 0,
+		"oAP": "/assets/images/team/okey-nwanya.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/wole-tejuoso.png": {
+		"ft": 32768,
+		"iS": 2668,
+		"oA": 0,
+		"oAP": "/assets/images/team/wole-tejuoso.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/img/1.jpg": {
@@ -1855,10 +2180,42 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/careers.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/careers.html",
+		"oF": 0
+		},
+	"/cases-and-results.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/cases-and-results.html",
+		"oF": 0
+		},
+	"/code-of-conduct.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/code-of-conduct.html",
+		"oF": 0
+		},
 	"/config.rb": {
 		"ft": 131072,
 		"oA": 0,
 		"oAP": "/config.rb",
+		"oF": 0
+		},
+	"/contact.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/contact.html",
 		"oF": 0
 		},
 	"/craft/.htaccess": {
@@ -36140,6 +36497,14 @@
 		"oAP": "/craft/web.config",
 		"oF": 0
 		},
+	"/expertise.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/expertise.html",
+		"oF": 0
+		},
 	"/gbc.sql": {
 		"cB": 0,
 		"ft": 8192,
@@ -36148,12 +36513,28 @@
 		"oAP": "/gbc.sql",
 		"oF": 0
 		},
+	"/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/index.html",
+		"oF": 0
+		},
 	"/kit/_footer.kit": {
 		"cB": 0,
 		"ft": 2048,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/kit/_footer.html",
+		"oAP": "/_footer.html",
+		"oF": 0
+		},
+	"/kit/_header.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/_header.html",
 		"oF": 0
 		},
 	"/kit/about.kit": {
@@ -36228,6 +36609,30 @@
 		"oAP": "/publications.html",
 		"oF": 2
 		},
+	"/kit/team.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/kit/team.html",
+		"oF": 0
+		},
+	"/kit/team.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/team.html",
+		"oF": 0
+		},
+	"/profile.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/profile.html",
+		"oF": 0
+		},
 	"/public/.htaccess": {
 		"cB": 0,
 		"ft": 8192,
@@ -36258,6 +36663,41 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/public/web.config",
+		"oF": 0
+		},
+	"/publications.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/publications.html",
+		"oF": 0
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/team.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/team.html",
 		"oF": 0
 		}
 	},
@@ -38221,10 +38661,10 @@
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
-		"autoOutputPathRelativePath": "",
+		"autoOutputPathRelativePath": ".",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 1,
 		"shouldRunCacheBuster": 0,
 		"shouldRunHTMLMinifier": 0
 		},
