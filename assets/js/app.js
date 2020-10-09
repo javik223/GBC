@@ -399,9 +399,44 @@ $(document).ready(function () {
         });
     })();
 
-    GBC.clientCarousel = function () {
-        $(".js-clients-carousel").owlCarousel();
-    };
+    function initClientCarousel() {
+        var responsive = [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+        ];
+
+        $(".js-clients-carousel").slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 2,
+            responsive: responsive,
+        });
+    }
+
+    initClientCarousel();
 
     var Accordion = new GBC.Accordion();
     Accordion.init();

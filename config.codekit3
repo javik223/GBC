@@ -1143,11 +1143,33 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/team/adetola-lawal.png": {
+		"ft": 32768,
+		"iS": 184836,
+		"oA": 0,
+		"oAP": "/assets/images/team/adetola-lawal.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/team/ayoade-oluwasanmi.png": {
 		"ft": 32768,
 		"iS": 187689,
 		"oA": 0,
 		"oAP": "/assets/images/team/ayoade-oluwasanmi.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/chukwuemeka-ozuzu.png": {
+		"ft": 32768,
+		"iS": 168346,
+		"oA": 0,
+		"oAP": "/assets/images/team/chukwuemeka-ozuzu.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1164,6 +1186,38 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/images/team/edwin-egede.png": {
+		"ft": 32768,
+		"iS": 162927,
+		"oA": 0,
+		"oAP": "/assets/images/team/edwin-egede.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/eruvwun-juweto.png": {
+		"ft": 32768,
+		"iS": 167288,
+		"oA": 0,
+		"oAP": "/assets/images/team/eruvwun-juweto.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/facebook-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/team/facebook-black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/images/team/gbenga-biobaku.png": {
 		"ft": 32768,
@@ -1186,6 +1240,27 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/images/team/joseph-omoba.png": {
+		"ft": 32768,
+		"iS": 185503,
+		"oA": 0,
+		"oAP": "/assets/images/team/joseph-omoba.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/linkedin-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/team/linkedin-black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/images/team/lola-ogunmodede.png": {
 		"ft": 32768,
@@ -1219,6 +1294,37 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/images/team/sandra-gini.png": {
+		"ft": 32768,
+		"iS": 155706,
+		"oA": 0,
+		"oAP": "/assets/images/team/sandra-gini.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/team/share.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/team/share.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/images/team/twitter-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/team/twitter-black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/images/team/wole-tejuoso.png": {
 		"ft": 32768,
