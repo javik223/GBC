@@ -29,8 +29,58 @@
     color: black;
 }
 
+.color-white {
+    color: white;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .position-relative {
     position: relative;
+}
+
+.letter-spacing-4 {
+    letter-spacing: 4px;
+}
+
+.round-padded-icon {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.round-padded-icon--gray {
+    background: #efefef;
+}
+
+.round-padded-icon svg {
+    height: 20px;
+}
+
+.round-padded-icon svg {
+    filter: brightness(0.5);
+}
+
+.round-padded-icon--white {
+    background: #ffffff;
+}
+
+.round-padded-icon:hover {
+    filter: brightness(95%);
+}
+
+.share-icon {
+    filter: brightness(0.95);
+}
+
+.margin-0 {
+    margin: 0 !important;
 }
 
 /* BIO */
@@ -47,7 +97,8 @@
     height: 100%;
 }
 
-.bio .striped-background {
+.bio .striped-background,
+.about .striped-background {
     bottom: 0;
     transform: translateX(50%);
     max-height: unset;
@@ -55,13 +106,10 @@
 }
 
 @media screen and (min-width: 40rem) {
-    .bio .striped-background {
+    .bio .striped-background,
+    .about .striped-background {
         transform: translateX(25%);
     }
-}
-
-.bio .bio__icons {
-    /* margin: 4rem 0; */
 }
 
 .bio .bio__icon-wrapper {
@@ -127,6 +175,76 @@
 
 .publication-area .publication .publication__content {
     line-height: 24px;
+}
+
+.publication-post__hero {
+    height: 80vh;
+    position: relative;
+    z-index: -1;
+}
+
+.publication-post__hero::before {
+    position: absolute;
+    height: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.publication-post__hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.publication-post__content {
+    z-index: 1;
+}
+
+.publication-post__intro {
+    margin-top: -30vh;
+}
+
+.publication-post__intro h1 {
+    color: #0095da;
+}
+
+.publication-post__content-card {
+    background: white;
+}
+
+.publication-post .feature-card {
+    background-color: #f0f0f0;
+}
+
+.publication-post .feature-card__button {
+    background-color: #0095da;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.publication-post .feature-card__button:hover {
+    filter: brightness(0.9);
+}
+
+.publication-post .feature-card__image-wrapper {
+}
+
+.publication-post .feature-card__image-wrapper img {
+    width: 100%;
+}
+
+.publication-post .feature-card__button .icon {
+    position: absolute;
+    right: 1rem;
 }
 
 /* CLIENTS */

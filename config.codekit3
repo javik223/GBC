@@ -167,11 +167,31 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/icons/facebook-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/facebook-black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/assets/icons/ip.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/icons/ip.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/linkedin-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/linkedin-black.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -212,6 +232,26 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/assets/icons/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/share.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/share.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/assets/icons/twitter-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/icons/twitter-black.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -557,6 +597,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/assets/images/business-owner-outside-shop.png": {
+		"ft": 32768,
+		"iS": 7571229,
+		"oA": 0,
+		"oAP": "/assets/images/business-owner-outside-shop.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/careers.jpg": {
 		"ft": 16384,
 		"iS": 493236,
@@ -590,6 +641,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/clients/baker-hughes.png": {
+		"ft": 32768,
+		"iS": 18555,
+		"oA": 0,
+		"oAP": "/assets/images/clients/baker-hughes.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/clients/bj-services-nigeria.jpg": {
 		"ft": 16384,
 		"iS": 4480,
@@ -601,6 +663,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/images/clients/emerging-africa.png": {
+		"ft": 32768,
+		"iS": 69703,
+		"oA": 0,
+		"oAP": "/assets/images/clients/emerging-africa.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/clients/equinor.png": {
+		"ft": 32768,
+		"iS": 11304,
+		"oA": 0,
+		"oAP": "/assets/images/clients/equinor.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/clients/exxon-mobil.jpg": {
 		"ft": 16384,
 		"iS": 6762,
@@ -610,6 +694,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/clients/exxon-mobil.png": {
+		"ft": 32768,
+		"iS": 12357,
+		"oA": 0,
+		"oAP": "/assets/images/clients/exxon-mobil.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/images/clients/oceaneering-nigeria.jpg": {
@@ -654,6 +749,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/images/clients/rockwell-automation.png": {
+		"ft": 32768,
+		"iS": 24811,
+		"oA": 0,
+		"oAP": "/assets/images/clients/rockwell-automation.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/assets/images/clients/statoil-ngieria.jpg": {
@@ -754,6 +860,16 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/assets/images/featured-publication.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/images/featured-publication.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/assets/images/fiber.png": {
 		"ft": 32768,
@@ -36601,6 +36717,14 @@
 		"oAP": "/profile.html",
 		"oF": 2
 		},
+	"/kit/publication.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/publication.html",
+		"oF": 0
+		},
 	"/kit/publications.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -36608,14 +36732,6 @@
 		"oA": 0,
 		"oAP": "/publications.html",
 		"oF": 2
-		},
-	"/kit/team.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/kit/team.html",
-		"oF": 0
 		},
 	"/kit/team.kit": {
 		"cB": 0,
@@ -36665,12 +36781,28 @@
 		"oAP": "/public/web.config",
 		"oF": 0
 		},
+	"/publication.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/publication.html",
+		"oF": 0
+		},
 	"/publications.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/publications.html",
+		"oF": 0
+		},
+	"/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
 		"oF": 0
 		},
 	"/README.md": {
