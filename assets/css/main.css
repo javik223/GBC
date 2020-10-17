@@ -83,6 +83,10 @@
     margin: 0 !important;
 }
 
+a.button {
+    line-height: 1.5rem;
+}
+
 /* BIO */
 .striped-background {
     position: absolute;

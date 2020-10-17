@@ -17,16 +17,6 @@
 		"oAP": "/about.html",
 		"oF": 0
 		},
-	"/assets/css/aboutpage-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/aboutpage-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/assets/css/app.css": {
 		"aP": 1,
 		"bl": 0,
@@ -44,16 +34,6 @@
 		"oA": 0,
 		"oAP": "/assets/css/app.css.map",
 		"oF": 0
-		},
-	"/assets/css/homepage-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/homepage-min-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/assets/css/main-min.css": {
 		"aP": 1,
@@ -92,16 +72,6 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/owl.theme.default.min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/css/teampage-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/css/teampage-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
