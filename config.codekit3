@@ -109,6 +109,62 @@
 		"oAP": "/assets/fonts/icomoon.woff",
 		"oF": 0
 		},
+	"/assets/fonts/karmina.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/karmina.ttf",
+		"oF": 0
+		},
+	"/assets/fonts/MinervaModernBlack.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/MinervaModernBlack.ttf",
+		"oF": 0
+		},
+	"/assets/fonts/MinervaModernBlackItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/MinervaModernBlackItalic.ttf",
+		"oF": 0
+		},
+	"/assets/fonts/MinervaModernBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/MinervaModernBold.ttf",
+		"oF": 0
+		},
+	"/assets/fonts/MinervaModernBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/MinervaModernBoldItalic.ttf",
+		"oF": 0
+		},
+	"/assets/fonts/MinervaModernItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/MinervaModernItalic.ttf",
+		"oF": 0
+		},
+	"/assets/fonts/MinervaModernRegular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/assets/fonts/MinervaModernRegular.ttf",
+		"oF": 0
+		},
 	"/assets/fonts/selection.json": {
 		"ft": 524288,
 		"oA": 1,

@@ -1,3 +1,47 @@
+/* FONTS */
+@font-face {
+    font-family: "Minerva Modern";
+    src: url("/assets/fonts/MinervaModernBlack.ttf") format("ttf");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Minerva Modern";
+    src: url("/assets/fonts/MinervaModernBlackItalic.ttf") format("ttf");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Minerva Modern";
+    src: url("/assets/fonts/MinervaModernBold.ttf") format("ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Minerva Modern";
+    src: url("/assets/fonts/MinervaModernBoldItalic.ttf") format("ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Minerva Modern";
+    src: url("/assets/fonts/MinervaModernRegular.ttf") format("ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Minerva Modern";
+    src: url("/assets/fonts/MinervaModernItalic.ttf") format("ttf");
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* TYPOGRAPHY */
+.text-sans {
+    font-family: "Minerva Modern", sans-serif;
+}
+
 /* GENERAL */
 .section__cta {
     margin-top: 4rem;
@@ -27,6 +71,10 @@
 
 .color-black {
     color: black;
+}
+
+.color-dark-gray {
+    color: #141414;
 }
 
 .color-white {
@@ -126,6 +174,7 @@ a.button {
 
 .bio .bio__icon-wrapper img {
     height: 100%;
+    filter: hue-rotate(25deg) brightness(90%);
 }
 
 /* PUBLICATIONS */
