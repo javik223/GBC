@@ -53,8 +53,16 @@
 }
 
 .section--large-padding {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+}
+
+@media screen and (min-width: 48rem) {
+    .section--large-padding {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
 }
 .section--medium {
     margin-top: 4rem;
@@ -137,12 +145,13 @@ a.button {
 
 /* BIO */
 .striped-background {
-    position: absolute;
-    top: -11.5%;
-    right: -25%;
     max-height: 70vh;
-    z-index: -1;
+    position: absolute;
     overflow: hidden;
+    right: 0;
+    /* height: 100%; */
+    top: -11.5%;
+    z-index: -1;
 }
 
 .striped-background img {
@@ -152,15 +161,22 @@ a.button {
 .bio .striped-background,
 .about .striped-background {
     bottom: 0;
-    transform: translateX(50%);
+    transform: translateX(75%);
     max-height: unset;
+    /* top: unset; */
     top: unset;
 }
 
 @media screen and (min-width: 40rem) {
     .bio .striped-background,
     .about .striped-background {
-        transform: translateX(25%);
+        transform: translateX(75%);
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .bio .striped-background, .about .striped-background {
+        transform: translateX(85%);
     }
 }
 
@@ -322,9 +338,12 @@ a.button {
 }
 
 /* TEAM */
+.team-member {
+    position: relative;
+}
+
 .team-member .team-member_image {
     overflow: hidden;
-    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -333,21 +352,22 @@ a.button {
     content: url(/assets/images/blue-stripes.svg);
     height: 100%;
     width: 100%;
-    right: -25%;
-    top: 0;
+    left: 100%;
+    bottom: 0;
     opacity: 0;
-    transition: 0.8s ease-in-out;
+    transition: 0.8s ease-out;
     z-index: 1;
 }
 
 .team-member:hover .team-member_image::before {
-    transform: translateX(-35%);
+    transform: translateX(-250px);
     opacity: 1;
 }
 
 .team-member .team-member_image img {
     filter: grayscale(80%);
     transition: 0.6s ease-in-out;
+    transform-origin: top center;
 }
 
 .team-member:hover .team-member_image img {
@@ -355,15 +375,50 @@ a.button {
     transform: scale(1.5);
 }
 
+.team-member__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-right: 3rem !important;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.85) 100%);
+    /* z-index: 1; */
+}
+
+.team-member__content::after {
+    position: absolute;
+    content: "";
+    background: url('/assets/icons/plus.svg');
+    background-size: 100% 100%;
+    top: calc(50% + 0.5rem);
+    transform: translateY(-50%);
+    right: 1rem;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #0095da;
+    border-radius: 50%;
+}
+
 .team-member .team-member_name {
-    font-size: 18px;
-    color: #0095da;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
+    line-height: 1.25rem;
 }
 
 .team-member .team-member_designation {
+    color: white;
     float: unset;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-size: 12px;
+    line-height: 1rem;
 }
 
 /* EXPERTISE */
