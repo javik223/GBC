@@ -111,6 +111,10 @@
     color: #141414;
 }
 
+.color-mid-gray {
+    color: #686868;
+}
+
 .color-white {
     color: white;
 }
@@ -168,7 +172,10 @@
     margin-bottom: 0 !important;
 }
 
-a.button {
+a.button,
+a.button * {
+    font-weight: bold;
+    font-size: 14px;
     line-height: 1.5rem;
 }
 
