@@ -53,7 +53,7 @@
 }
 .section--large-padding {
     padding-top: 5rem;
-    padding-bottom: 5rem;   
+    padding-bottom: 5rem;
 }
 .section--medium {
     margin-top: 2.5rem;
@@ -61,7 +61,7 @@
 }
 .section--medium-padding {
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem;   
+    padding-bottom: 2.5rem;
 }
 .section--small {
     margin-top: 1.5rem;
@@ -92,7 +92,7 @@
     .section--xsmall {
         margin-top: 1rem;
         margin-bottom: 1rem;
-    }    
+    }
     .section--medium-padding {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -194,7 +194,7 @@ a.button * {
     max-width: unset;
 }
 
-.bio .striped-background{
+.bio .striped-background {
     /* height: 100vh; */
     top: unset;
     bottom: 0;
@@ -221,19 +221,21 @@ a.button * {
         right: -25%;
         max-height: 125vh;
     }
-    
-    .about .striped-background{
+
+    .about .striped-background {
         opacity: 1;
-        left: calc(100% - 12rem);}
-    
+        left: calc(100% - 12rem);
+    }
+
     .publications-page .striped-background {
         right: -8rem;
     }
 }
 
 @media screen and (min-width: 64rem) {
-    .about .striped-background{
-        left: calc(100% - 16rem);}
+    .about .striped-background {
+        left: calc(100% - 16rem);
+    }
     .bio .striped-background {
         max-height: 100vh;
         right: -25%;
@@ -321,7 +323,12 @@ a.button * {
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 100%);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.25) 50%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
 }
 
 .publication-post__hero img {
@@ -448,23 +455,13 @@ a.button * {
     padding: 1rem;
     padding-top: 2rem;
     padding-right: 3rem !important;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%,
-    rgba(0,0,0,0.85) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
     /* z-index: 1; */
-}
-
-.team-member__content::after {
-    position: absolute;
-    content: "";
-    background: url('/assets/icons/plus.svg');
-    background-size: 100% 100%;
-    top: calc(50% + 0.5rem);
-    transform: translateY(-50%);
-    right: 1rem;
-    height: 24px;
-    width: 24px;
-    border: 1px solid #0095da;
-    border-radius: 50%;
 }
 
 .team-member .team-member_name {
