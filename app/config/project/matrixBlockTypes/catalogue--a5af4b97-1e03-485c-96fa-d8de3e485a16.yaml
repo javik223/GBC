@@ -1,0 +1,148 @@
+field: 6983d58a-4697-42f9-9db7-bbcc6bab4025
+fieldLayouts:
+  1b668f4b-c752-4610-a967-a6c89c8dee50:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 81b28295-3b9c-41aa-88d5-1c19b6047d60
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 13e8f308-e077-4146-9fea-b8d27594738e
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1b2826f4-5ffe-4ca8-968b-16629494fa7a
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2cb40e27-5a38-4d7e-92a7-7e5049532e61
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  13e8f308-e077-4146-9fea-b8d27594738e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: catalogueImage
+    instructions: ''
+    name: 'Catalogue Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      singleUploadLocationSubpath: 'designers/{slug}/catalogue'
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  1b2826f4-5ffe-4ca8-968b-16629494fa7a:
+    contentColumnType: string
+    fieldGroup: null
+    handle: catalogue
+    instructions: ''
+    name: Catalogue
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - pdf
+        - powerpoint
+        - word
+      defaultUploadLocationSource: 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      singleUploadLocationSubpath: 'designers/{slug}/catalogue/download'
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  2cb40e27-5a38-4d7e-92a7-7e5049532e61:
+    contentColumnType: string(500)
+    fieldGroup: null
+    handle: catalogueUrl
+    instructions: ''
+    name: 'Catalogue URL'
+    searchable: false
+    settings:
+      maxLength: '500'
+      placeholder: 'catalogue url'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  81b28295-3b9c-41aa-88d5-1c19b6047d60:
+    contentColumnType: text
+    fieldGroup: null
+    handle: catalogueTitle
+    instructions: ''
+    name: 'Catalogue Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: catalogue
+name: Catalogue
+sortOrder: 1

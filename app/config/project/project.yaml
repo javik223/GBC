@@ -1,0 +1,78 @@
+dateModified: 1603481466
+email:
+  fromEmail: javik@live.com
+  fromName: 'Lagos Fashion Week'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  blitz:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.6.6
+  calendar:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.1.0
+  colorit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.3
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.0.8
+  icon-picker:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  imager-x:
+    edition: pro
+    enabled: true
+    schemaVersion: 3.0.0
+  linkit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.8
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.21
+  neo:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.8.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retour:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+system:
+  edition: pro
+  live: true
+  name: 'Lagos Fashion Week'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

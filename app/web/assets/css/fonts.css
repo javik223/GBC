@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Black Italic"), local("ApercuPro-BlackItalic"), url("/assets/fonts/ApercuPro-BlackItalic.woff2") format("woff2"), url("/assets/fonts/ApercuPro-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Light Italic"), local("ApercuPro-LightItalic"), url("/assets/fonts/ApercuPro-LightItalic.woff2") format("woff2"), url("/assets/fonts/ApercuPro-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Light"), local("ApercuPro-Light"), url("/assets/fonts/ApercuPro-Light.woff2") format("woff2"), url("/assets/fonts/ApercuPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Medium Italic"), local("ApercuPro-MediumItalic"), url("/assets/fonts/ApercuPro-MediumItalic.woff2") format("woff2"), url("/assets/fonts/ApercuPro-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Black"), local("ApercuPro-Black"), url("/assets/fonts/ApercuPro-Black.woff2") format("woff2"), url("/assets/fonts/ApercuPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Regular"), local("ApercuPro-Regular"), url("/assets/fonts/ApercuPro-Regular.woff2") format("woff2"), url("/assets/fonts/ApercuPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Medium"), local("ApercuPro-Medium"), url("/assets/fonts/ApercuPro-Medium.woff2") format("woff2"), url("/assets/fonts/ApercuPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Italic"), local("ApercuPro-Italic"), url("/assets/fonts/ApercuPro-Italic.woff2") format("woff2"), url("/assets/fonts/ApercuPro-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=sass-maps/fonts.css.map */

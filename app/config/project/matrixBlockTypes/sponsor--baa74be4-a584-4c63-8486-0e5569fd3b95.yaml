@@ -1,0 +1,83 @@
+field: 442ac823-c336-4cf2-a2e2-58a88a6bd78d
+fieldLayouts:
+  5d088187-0609-49ce-a0c4-c352cd005987:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 540dbc95-d3c9-4c80-a05e-5d67c0bea943
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a8c3a2be-4391-44f7-aa7b-fabc6267e878
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  540dbc95-d3c9-4c80-a05e-5d67c0bea943:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sponsorsName
+    instructions: ''
+    name: 'Sponsor''s Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a8c3a2be-4391-44f7-aa7b-fabc6267e878:
+    contentColumnType: string
+    fieldGroup: null
+    handle: sponsorsLogo
+    instructions: ''
+    name: 'Sponsor''s Logo'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      defaultUploadLocationSubpath: sponsors-logo
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add a sponsor''s logo'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:66c3e47f-3fe3-4a98-9461-77cc9794eccd'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: sponsor
+name: Sponsor
+sortOrder: 1

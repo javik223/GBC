@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: lfw2020Designers
+name: 'LFW2020 Designers'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  00accd63-95d7-4b22-b81f-1c537016045f:
+    enabledByDefault: true
+    hasUrls: true
+    template: lfw2020/designers/_entry
+    uriFormat: 'lfw2020/designers/{slug}'
+structure:
+  maxLevels: null
+  uid: 162568a6-d4ac-44e0-aa3b-3042687ec116
+type: structure

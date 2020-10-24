@@ -1,0 +1,48 @@
+contentColumnType: string
+fieldGroup: 10d70fe8-86c0-4e8d-8f03-856feb15a215
+handle: socialHandles
+instructions: ''
+name: 'Social Handles'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - a594f6a5-c596-49a9-aadc-8a12f49fcfd3
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - fdd4d4e0-eae9-443b-89cf-1cb0760facee
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 5560d053-7b5e-459b-828b-545f8b137560
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - b6bcc939-1994-4d3e-be57-25478dc786fe
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_socialhandles}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

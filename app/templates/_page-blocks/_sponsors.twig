@@ -1,0 +1,16 @@
+<div class="partners-and-sponsors">
+  <h5 class="partners-and-sponsors__title">Our Partners &amp; Sponsors</h5>
+  <div class="sponsors-rail">
+    {% set sponsors = sponsors.sponsors %} {% for sponsor in sponsors %} <img
+    src="{{ sponsor.sponsorsLogo.one().getUrl("sponsors") }}" alt="{{
+      sponsor.title
+    }}"> {% endfor %}
+    <!-- <img src="/assets/img/heineken-logo.jpg" alt="Heineken" /><img
+      src="/assets/img/style-house-files.png"
+      alt="Style House Files"
+    /><img src="/assets/img/woven-thread-logo.png" alt="Woven Thread" /><img
+      src="/assets/img/sunlight-logo.png"
+      alt="Sunlight"
+    /><img src="/assets/img/nepc.jpg" alt="NEPC" /> -->
+  </div>
+</div>

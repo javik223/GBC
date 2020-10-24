@@ -1,0 +1,35 @@
+{% macro icons(withDivider = false, iconSize="3x") %} {% set withDividerClass =
+"" %} {% if withDivider == true %} {% set withDividerClass =
+"social-icons--with-divider" %} {% endif %}
+<div class="cell social-icons medium-auto {{ withDividerClass }}">
+  {% if socialLinks.facebook %}
+  <a
+    href="{{ socialLinks.facebook }}"
+    class="icon-facebook icon-scale-{{ iconSize }}"
+    title="Lagos Fashion Week on Facebook"
+    target="_blank"
+  ></a>
+  {% endif %} {% if socialLinks.twitter %}
+  <a
+    href="{{ socialLinks.twitter }}"
+    class="icon-twitter icon-scale-{{ iconSize }}"
+    title="Lagos Fashion Week on Twitter"
+    target="_blank"
+  ></a>
+  {% endif %} {% if socialLinks.youtube %}
+  <a
+    href="{{ socialLinks.youtube }}"
+    class="icon-youtube icon-scale-{{ iconSize }}"
+    title="Lagos Fashion Week on Youtube"
+    target="_blank"
+  ></a>
+  {% endif %} {% if socialLinks.instagram %}
+  <a
+    href="{{ socialLinks.instagram }}"
+    class="icon-instagram icon-scale-{{ iconSize }}"
+    title="Lagos Fashion Week on Instagram"
+    target="_blank"
+  ></a>
+  {% endif %}
+</div>
+{% endmacro %}

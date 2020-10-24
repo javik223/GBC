@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: ca0593f3-4dfc-4559-85ba-5cc2ad285f49
+handle: facebook
+instructions: ''
+name: Facebook
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

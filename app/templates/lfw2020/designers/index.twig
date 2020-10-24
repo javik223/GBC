@@ -1,0 +1,67 @@
+{% extends "_layout" %} {% block content %}
+<div class="grid-container padding-top-3 padding-bottom-3">
+  <div class="grid-x">
+    <div class="cell medium-10 medium-offset-2 large-7 large-offset-5">
+      <h1 class="h2 padding-bottom-1">{{ entry.title }}</h1>
+      <div class="grid-x">
+        <p class="cell medium-11 large-9">
+          {{ entry.intro|striptags("p")}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-x padding-top-3 collection-filter">
+    <div class="cell medium-10 medium-offset-2 large-7 large-offset-5">
+      <!-- collection filter -->
+      {% include "_page-blocks/_collection-filter" %}
+      <!--/ collection filter -->
+    </div>
+  </div>
+</div>
+{% set perPage = 24 %}
+{% if entry.collectionPerPage|length %}
+  {% set  perPage = entry.collectionPerPage %}
+{% endif %}
+{% set query = craft.entries().section('lfw2020Designers').limit(perPage) %}
+{% paginate query as pageInfo, designerEntries %}
+  
+<div class="grid-x small-up-2 medium-up-3 large-up-4">
+  <!-- designers -->
+  {% for designer in designerEntries %}
+  <a
+    class="designer-feature cell"
+    title="{{ designer.title }}"
+    href="{{ designer.url }}"
+  >
+    <div class="designer-feature__image">
+      <img
+        src="{{ designer.featuredImage.first().getUrl('sponsors') }}"
+        alt="{{ designer.title }}"
+      />
+    </div>
+    <h5 class="text-bold">{{ designer.title }}</h5>
+  </a>
+  {% endfor %}
+  <!-- designers -->
+</div>
+<div class="grid-x collection-nav align-middle">
+  
+  <div class="cell small-3">
+    {% if pageInfo.prevUrl %}<a class="collection-nav__prev" href="{{ pageInfo.prevUrl }}"><span class="icon-left-arrow"></span> prev</a>{% endif %}
+  </div>
+
+  <ul class="cell small-6 collection-nav__main hide-scrollbar">
+  {% set pages = pageInfo.getRangeUrls(0, pageInfo.total) %}
+  {% if pages|length > 1 %}
+    {% for index, url in pages %}
+    <li>
+      <a href="{{ url }}" title="page {{ index }}">{{ index }}</a>
+    </li>
+    {% endfor %}
+  {% endif %}
+  </ul>
+  <div class="cell small-3">
+  {% if pageInfo.nextUrl %}<a class="collection-nav__next" href="{{ pageInfo.nextUrl }}">next <span class="icon-right-arrow"></a>{% endif %}</div>
+</div>
+
+{% endblock %}

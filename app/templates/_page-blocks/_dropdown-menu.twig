@@ -1,0 +1,53 @@
+{% import "_macros/_social-icons" as social %}
+<nav class="dropdown-menu">
+  <div class="grid-container dropdown-menu__wrapper">
+    <div class="grid-x">
+      <div class="cell medium-auto medium-offset-6">
+        <div class="cell">
+          <a
+            class="dropdown-menu__section-heading text-spaced-3"
+            href="/"
+            title="Lagos Fashion Week 2020"
+            >LFW2020</a
+          >
+        </div>
+        <!-- Current Season -->
+        <ul>
+          {% set currentSeason = craft.navigation.nodes('currentSeason').all()
+          %}
+          <ul>
+            {% nav node in currentSeason %}
+            <li>
+              {{ node.link }}
+            </li>
+            {% endnav %}
+          </ul>
+        </ul>
+        <!-- Current Season Ends -->
+        <div class="cell padding-top-2">
+          <a
+            class="dropdown-menu__section-heading text-spaced-3"
+            href="/"
+            title="Lagos Fashion Week 2020"
+            >Lagos Fashion Week</a
+          >
+        </div>
+        <!-- Geneneral -->
+        <ul>
+          {% set general = craft.navigation.nodes('general').all() %}
+          <ul>
+            {% nav node in general %}
+            <li>
+              {{ node.link }}
+            </li>
+            {% endnav %}
+          </ul>
+        </ul>
+        <div class="grid-x align-middle padding-top-3">
+          <!-- Social Icons -->
+          {{ social.icons(true, "3x") }}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
