@@ -1,0 +1,81 @@
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-right:before {
+  content: "\e905";
+}
+.icon-chevron-left:before {
+  content: "\e903";
+}
+.icon-caret-right:before {
+  content: "\e902";
+}
+.icon-caret-left:before {
+  content: "\e901";
+}
+.icon-linkedin:before {
+  content: "\e900";
+}
+.icon-download:before {
+  content: "\e904";
+}
+
+
+.icon-open{
+	width: rem-calc(25);
+	height: rem-calc(25);
+	border-radius: 50%;
+	border: rem-calc(1.5) solid color(primary);
+	display: inline-block;
+	position: relative;
+
+	@include breakpoint(medium up) {
+		width: rem-calc(30);
+		height: rem-calc(30);
+	}
+
+	&:before, &:after {
+		content: '';
+		width: 60%;
+		height: rem-calc(1.5);
+		background-color: color(primary);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&:after {
+		width: rem-calc(2);
+		height: 60%;
+	}
+
+	&-alt {
+		border: rem-calc(1.5) solid color(white);
+
+		&:before, &:after {
+			background-color: color(white);
+		}
+	}
+}
+.icon-close {
+	@extend .icon-open;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}

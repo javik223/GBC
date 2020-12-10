@@ -1,8 +1,0 @@
-@import "foundation";
-@import "settings";
-@import "components/iconfonts.scss";
-@import "sections/schedule";
-@import "sections/sponsors";
-@import "sections/footer";
-@import "components/social-icons";
-@include foundation-everything($prototype: true);

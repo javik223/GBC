@@ -1,0 +1,74 @@
+.grid-x {
+	&-pad {
+		> div {
+			@include breakpoint(medium up) {
+				padding-right: $padding * 2;
+			}
+		}
+	}
+}
+.celllapse {
+	padding: 0 !important;
+}
+
+//Extra padding for mobile and tablet
+.m-pad {
+	@include breakpoint(small only) {
+		padding-left: rem-calc(30);
+		padding-right: rem-calc(30) !important;
+	}
+}
+.mt-pad {
+	@extend .m-pad; 
+
+	@include breakpoint(medium only) {
+		padding-left: rem-calc(30);
+		padding-right: rem-calc(30) !important;
+	}
+}
+// Add normal Bottom Padding
+.pbn {
+	padding-bottom: $padding;
+}
+// Add large Bottom Padding
+.pbb {
+	padding-bottom: $padding * 2;
+}
+
+// Visibility state on different devices
+// m - mobile, t - tablet, l - larged devices (desktop), mt - mobile and tablet
+.s-hide {
+	@include breakpoint(small only) {
+		display: none;
+	}
+}
+.m-hide {
+	@include breakpoint(medium only) {
+		display: none;
+	}
+}
+.l-hide {
+	@include breakpoint(large up) {
+		display: none;
+	}
+}
+.sm-hide {
+	display: none;
+
+	@include breakpoint(large up) {
+		display: auto;
+	}
+}
+.ml-hide {
+	@include breakpoint(medium up) {
+		display: none;
+	}
+}
+
+// Floats
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}

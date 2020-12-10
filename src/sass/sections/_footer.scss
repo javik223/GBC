@@ -1,44 +1,125 @@
 .footer {
-  font-size: 90%;
-  font-weight: 600;
+    @include xy-grid-container();
+    color: color(light-gray);
+    margin-top: $padding * 3;
 
-  ul {
-    margin-left: 0;
-  }
+    a {
+        text-decoration: none;
+        color: lighten(color(gray-light), 20%);
 
-  a {
-    color: $black;
-  }
-
-  li {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .copyright {
-    border-top: rem-calc(1) solid rgba($color: $black, $alpha: 0.2)
-  }
-
-  .sponsors {
-    a,
-    img {
-      display: inline-block;
+        &:active,
+        &:hover {
+            color: color(primary);
+        }
     }
 
-    img {
-      max-height: rem-calc(60);
-      padding-right: rem-calc(8);
-      padding-top: rem-calc(8);
-      padding-bottom: rem-calc(8);
+    .links {
+        @include xy-cell();
+        @include xy-grid();
+
+        @include breakpoint(medium up) {
+            @include xy-cell(8);
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        font-size: 90%;
+
+        ul {
+            @include xy-cell();
+            list-style-type: none;
+            margin-left: 0;
+
+
+            @include breakpoint(medium up) {
+                @include xy-cell(4);
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 
-    @include breakpoint(medium up) {
-      img {
-        padding: rem-calc(8);
-        padding-left: rem-calc(20);
-      }
+    .icon-linkedin {
+        color: color(primary);
+        font-size: 120%;
+        float: left;
+        padding: $padding;
+        margin: -$padding;
+
+        @include breakpoint(medium up) {
+            float: inherit;
+        }
     }
 
-  }
+    .social-and-awards {
+        @include xy-cell();
+
+        @include breakpoint(medium up) {
+            @include xy-cell(4);
+        }
+
+        float: right;
+        text-align: right;
+        margin-top: $padding * 3;
+
+        @include breakpoint(medium up) {
+            margin-top: 0;
+        }
+
+        img {
+            float: right;
+            width: rem-calc(80);
+            margin-bottom: $padding;
+
+            @include breakpoint(medium up) {
+                width: rem-calc(130);
+            }
+        }
+    }
+
+    .awards {
+        img {
+            padding-left: $padding;
+        }
+
+        @include breakpoint(medium up) {
+            margin-top: $padding * 4;
+        }
+    }
+
+    .bottom {
+        border-top: 1px solid lighten(color(gray-light), 35%);
+        padding-top: $padding;
+        margin-top: $padding * 3;
+        margin-bottom: $padding * 3;
+        font-size: 80%;
+
+        li {
+            display: inline;
+            padding-right: $padding * 0.5;
+            margin-right: $padding * 0.5;
+            border-right: 1px solid lighten(color(gray-light), 20%);
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    .membership {
+        img {
+            height: rem-calc(70);
+            float: right;
+            margin-top: rem-calc(10);
+            clear: both;
+            width: auto;
+
+            @include breakpoint(medium up) {
+                width: rem-calc(250);
+                height: auto;
+            }
+        }
+    }
 }

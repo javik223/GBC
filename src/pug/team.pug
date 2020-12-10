@@ -1,0 +1,80 @@
+extends _layout
+block content
+  .grid-container.section--large
+    .section--large-padding
+      h1.c-p.beta.text-center.nmb The Team
+      .grid-x.align-center.text-center.section--small
+        p.cell.medium-9.large-6.text-sans.black.h5
+          | Our team of lawyers has a wide breadth of specialist skills and experience and is committed to keeping abreast of matters affecting the constantly changing business environment in which our clients operate. We are thus positioned to understand the business objectives of our clients and offer them proactive legal advice, which is commercially realistic and strategically focused.
+  .grid-container.full
+    .grid-x.small-up-2.medium-up-3.large-up-4.grid-margin-x.grid-margin-y
+      - 
+        const team = [
+          {
+            name: "Gbenga Biobaku",
+            designation: "Managing Partner",
+            image: "gbenga.jpg"
+          }, {
+            name: "Lola Ogunmodede",
+            designation: "Partner",
+            image: "lola-ogunmodede.png"
+          }, {
+            name: "Wole Tejuoso",
+            designation: "Partner",
+            image: "wole-tejuoso.png"
+          }, {
+            name: "Okey Nwanya",
+            designation: "Partner",
+            image: "okey-nwanya.png"
+          }, {
+            name: "Ijeoma Abalogu",
+            designation: "Managing Partner",
+            image: "ijeoma-abalogu.png"
+          }, {
+            name: "Ayoade Oluwasanmi",
+            designation: "Partner",
+            image: "ayoade-oluwasanmi.png"
+          }, {
+            name: "Nkoyo Rapu",
+            designation: "OF COUNSEL",
+            image: "nkoyo-rapu.png"
+          }, {
+            name: "Edward O. Vera Cruz",
+            designation: "OF COUNSEL",
+            image: "edward-cruz.png"
+          }, {
+            name: "Edwin Egede",
+            designation: "CONSULTANT",
+            image: "edwin-egede.png"
+          }, {
+            name: "Adetola Lawal",
+            designation: "SENIOR ASSOCIATE",
+            image: "adetola-lawal.png"
+          }, {
+            name: "Sandra Gini",
+            designation: "SENIOR ASSOCIATE",
+            image: "sandra-gini.png"
+          }, {
+            name: "Joseph Omoba",
+            designation: "ASSOCIATE",
+            image: "joseph-omoba.png"
+          }, {
+            name: "Chukwuemeka Ozuzu",
+            designation: "ASSOCIATE",
+            image: "chukwuemeka-ozuzu.png"
+          }, {
+            name: "Eruvwun Juweto",
+            designation: "ASSOCIATE",
+            image: "eruvwun-juweto.png"
+          }
+        ]
+
+      each member in team
+        .cell(vocab='http://schema.org/' typeof='Person')
+          a(href='profile.html' property='url')
+            .team-member
+              .team-member_image
+                img(src='/assets/images/team/'+member.image alt=member.name property='image')
+              .team-member__content
+                p.team-member_name(property='name') #{member.name}
+                p.team-member_designation.text-sans.text-uppercase(property='jobTitle') #{member.designation}

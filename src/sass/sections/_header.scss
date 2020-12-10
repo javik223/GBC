@@ -1,0 +1,229 @@
+//Menu Mixins
+$dark: lighten(color(gray-light), 30%);
+$light: #efefef;
+$color: #b3e5fc;
+
+@mixin btn($left, $top) {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition-duration: 0.5s;
+}
+
+@mixin icon($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 20px;
+  background-color: $dark;
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $dark;
+  content: "";
+  top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $dark;
+  content: "";
+  top: $top;
+}
+
+@mixin icon-circle($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 2px;
+  border-radius: 100%;
+  background: transparent;
+  border: 2px solid black;
+  left: -15px;
+}
+
+
+.header {
+	@include xy-grid-container(full);
+	// width: 100%;
+	padding-top: $padding;
+	padding-bottom: $padding;
+	position: relative;
+	overflow: visible;
+	box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.08);
+	z-index:80000;
+
+	.grid-x {
+		position: relative;
+	}
+
+	a {
+		text-decoration: none;
+		color: color(white);
+		transition: color 0.6s ease-out;
+		font-weight: 400;
+		font-size: rem-calc(18);
+		text-transform: uppercase;
+		font-weight: 400;
+
+		display: inline-block;
+
+		padding-top: $padding * 0.5;
+		padding-bottom: $padding * 0.5;
+
+		@include breakpoint(medium only){
+			font-size: rem-calc(12);
+		}
+
+		@include breakpoint(medium up) {
+			padding-top: 0;
+			color: lighten(color(gray-light), 20%);
+			font-weight: 700;
+			font-size: rem-calc(14);
+		}
+
+		&:hover {
+			color: color(primary);
+		}
+	}
+}
+.nav {
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+
+	@include breakpoint(medium up) {
+		width: auto;
+		position: relative;
+	}
+
+	ul {
+		@include breakpoint(small only) {
+			position: absolute;
+			left: 0;
+			top: rem-calc(47);
+			width: 110%;
+			background-color: adjust-hue(color(primary), 10%);
+			transform-origin: top center;
+			perspective: rem-calc(300);
+			margin-left: -5%;
+			padding-left: 5%;
+			// Hide temporariliy for debugging purpose
+			display: none;
+		}
+
+		@include breakpoint(medium only){
+			padding-left: $padding;
+		}
+	}
+
+	li {
+		display: block;
+		text-align: center;
+		text-align: left;
+
+		&:first-child {
+			@include breakpoint(small only) {
+				padding-top: $padding;
+			}
+		}
+		
+		@include breakpoint(small only) {
+			padding-left: $padding;
+
+			a {
+				display: block;
+			}
+
+			&:hover {
+				background-color: adjust-hue(color(primary), 12%);
+
+				a {
+					color: color(white);
+				}
+			}
+		}
+
+		@include breakpoint(medium up) {
+			display: inline;
+			margin-right: $padding * 0.5;
+		}
+
+		@include breakpoint(large up){
+			margin-right: $padding;
+		}
+	}
+}
+.logo {
+	@include breakpoint(medium up) {
+		@include xy-cell(auto);
+		text-align: right;
+	}
+
+	img {
+		width: rem-calc(150);
+
+		@include breakpoint(medium up) {
+			width: rem-calc(170);
+		}
+
+		@include breakpoint(large up){
+			width: rem-calc(200)
+		}
+	}
+	a {
+		padding: 0;
+		margin: 0;
+		// float: left;
+	}
+}
+
+.menu{
+  @include btn(200px, 300px);
+  position: absolute;
+  right: 0;
+  top: -$padding * 0.5;
+  transform: scale(0.8) rotateY(180deg);
+
+  @include breakpoint(medium up) {
+  	display: none;
+  }
+  
+  .icon {
+    @include icon(2px, 30px);
+    
+    &:before{
+      @include icon-before(2px, 30px, -10px);
+    }
+    
+    &:after{
+      @include icon-after(2px, 30px, 10px);
+    }
+  }
+  
+  &.open {
+    .icon {
+      transition: 0.5s;
+      
+      &:before{
+        transform: rotateZ(-45deg) scaleX(0.75) translate(-10px, -3px);
+      }
+
+      &:after{
+        transform: rotateZ(45deg) scaleX(0.75) translate(-10px, 3px);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

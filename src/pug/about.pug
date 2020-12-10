@@ -1,0 +1,103 @@
+extends _layout
+block content
+  .container.container-extra-pad.grid-container.position-relative.about
+    .grid-x.align-center
+      .cell.medium-8.text-center
+        h1.c-p.beta.text-center.nmb About Us
+        .section--medium
+          h6.text-sans.h4.pbb.cellor-black
+            | Gbenga Biobaku &amp; Co. (GBC) is a leading Nigerian commercial law firm located in Lagos, the commercial capital of Nigeria, with a representative office in Port Harcourt, the oil and gas nerve centre of the country. Our principal areas of practice are Oil and Gas, Energy, Maritime, Projects, Foreign Investments, Banking, Capital Markets and general Corporate/ Commercial Law.
+          .grid-x.align-center
+            .cell.medium-10
+              p.text-serif
+                | We provide legal advisory and related services to a diverse portfolio of clients ranging from multinational corporations to local corporate entities, entrepreneurs, government parastatals and non-governmental organisations.
+  .grid-container.mission-vision-area.pbb
+    .grid-x.grid-margin-x.grid-margin-y
+      .cell.medium-6.highlight-card
+        .grid-y.section--small-padding
+          h4.highlight-card__title Our Vision
+          .grid-x.align-center.text-center
+            h6.cell.large-10.text-sans.h5 To be the Commercial Law Firm of first choice in Nigeria
+      .cell.medium-6.highlight-card
+        .grid-y.section--small-padding
+          h4.highlight-card__title Our Mission
+          .grid-x.align-center.text-center
+            h6.cell.large-10.text-sans.h5
+              | Our mission is to provide top quality legal services and solutions which are strategically focused and practically beneficial to our wide and diverse range of clients.
+    .section--medium.grid-x.align-center
+      .bio.cell.medium-9.large-7
+        h4.cellor-black.text-sans.text-center.pbb.h5
+          | We are well drilled in both national and international business transactions. Our practice cover areas such as Oil &amp; Gas, Power, Corporate, Business Advisory, Ligitation and IP. Our expertise can be felt in our work with businesses and organisations of various shape and size, both large and small
+        .margin-top-2 &nbsp;
+        .grid-x.grid-margin-y.align-center.bio__icons.small-up-3.large-up-6
+          .cell.bio__icon-wrapper
+            img(src='/assets/icons/oil-and-gas.svg' alt='Oil and Gas')
+          .cell.bio__icon-wrapper
+            img(src='/assets/icons/power.svg' alt='Power')
+          .cell.bio__icon-wrapper
+            img(src='/assets/icons/corporate.svg' alt='Corporate')
+          .cell.bio__icon-wrapper
+            img(src='/assets/icons/business-advisory.svg' alt='Business Advisory')
+          .cell.bio__icon-wrapper
+            img(src='/assets/icons/litigation.svg' alt='Ligitation')
+          .cell.bio__icon-wrapper
+            img(src='/assets/icons/ip.svg' alt='IP')
+        .section__cta.text-center
+          a.button(href='/expertise.html')
+            span.icon.icon-caret-left
+            | Our Practice Areas &amp; Expertise
+  .container-gray.about-team-intro
+    .grid-container
+      .grid-x.section--large
+        .cell.medium-9.large-6.grid-y.align-spaced
+          h4.h5.cellor-black.text-sans Our team of lawyers has a wide breadth of specialist skills and experience and is committed to keeping abreast of matters affecting the constantly changing business environment in which our clients operate. We are thus positioned to understand the business objectives of our clients and offer them proactive legal advice, which is commercially realistic and strategically focused.
+          .section__cta
+            a.button(href='/team.html') Our Team 
+              span.icon.icon-caret-right
+        .cell.small-2.medium-3.about-team-intro__images
+          div
+            img(src='/assets/images/team/gbenga-biobaku.png' alt='Gbenga Biobaku')
+          div
+            img(src='/assets/images/team/nkoyo-rapu.png' alt='Nkoyo Rapu')
+          div
+            img(src='/assets/images/team/ijeoma-abalogu.png' alt='Ijeoma Abalogu')
+          div
+            img(src='/assets/images/team/edward-cruz.png' alt='Edward O. Vera Cruz')
+  .grid-container
+    .grid-x.section--large.align-center.text-center
+      .cell.small-9.large-6
+        p.cellor-mid-gray We believe that our firm&rsquo;s considerable network of local and international contacts, the accessibility of our team of lawyers and the depth of our experience across many industry sectors make us a valuable resource and legal advisor.
+        p.cellor-mid-gray Building strong client relationships is the compass of our business strategy. With diverse experience and exceptional professionals with specialist skills, we have continually delivered quality to our clients through the development of innovative legal solutions.
+        .section__cta.grid-x.align-center
+          a.button.cell.large-6(href='/team.html')
+            .grid-x.align-middle
+              .cell.auto
+                | Working with us
+              .cell.shrink.icon.icon-caret-right
+  // Clients
+  section.grid-container.section--large.clients-area
+    h2.c-p.beta.text-center.nmb Our Clients
+    .grid-x.align-center.section--small
+      p.cell.medium-6.text-center.text-sans
+        | Our client list spans the oil and gas, construction, banking and financial institutions, here are a list of some of our clients.
+    .clients-carousel.js-clients-carousel
+      .clients-carousel__slide
+        img(src='/assets/images/clients/baker-hughes.png' alt='Baker Hughes')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/equinor.png' alt='Equinor')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/emerging-africa.png' alt='Emerging Africa')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/exxon-mobil.png' alt='Exxon Mobil')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/rockwell-automation.png' alt='Rockwell Automation')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/baker-hughes.png' alt='Baker Hughes')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/equinor.png' alt='Equinor')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/emerging-africa.png' alt='Emerging Africa')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/exxon-mobil.png' alt='Exxon Mobil')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/rockwell-automation.png' alt='Rockwell Automation')

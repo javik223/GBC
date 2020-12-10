@@ -65,7 +65,7 @@ const onError = function (error, message) {
     message,
   }).write(error);
 
-  gutil.log(gutil.colors.bgRed(message));
+  gutil.log(gutil.cellors.bgRed(message));
   this.emit('end');
 };
 

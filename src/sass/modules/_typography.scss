@@ -1,0 +1,118 @@
+
+// Header elements font settings
+$headers: (
+	h1: (fontSize: 48, lineHeight: 52, mFontSize: 48, mLineHeight: 52, sFontSize: 36, sLineHeight: 40),
+	h2: (fontSize: 36, lineHeight: 43, mFontSize: 30, mLineHeight: 38, sFontSize: 24, sLineHeight: 32),
+	h3: (fontSize: 22, lineHeight: 32, mFontSize: 24, mLineHeight: 32, sFontSize: 18, sLineHeight: 28),
+	h4: (fontSize: 18, lineHeight: 30, mFontSize: 20, mLineHeight: 30, sFontSize: 14, sLineHeight: 24),
+	h5: (fontSize: 14, lineHeight: 20, mFontSize: 12, mLineHeight: 16, sFontSize: 12, sLineHeight: 16),
+);
+
+
+@each $elem, $prop in $headers {
+	#{$elem} {
+		font-size: rem-calc(map-get($prop, sFontSize));
+		line-height: rem-calc(map-get($prop, sLineHeight));
+		margin-bottom: rem-calc(map-get($prop, sLineHeight)/2) !important;
+		font-family: $font-family-sans-serif;
+
+		@include breakpoint(medium up) {
+			font-size: rem-calc(map-get($prop, mFontSize));
+			line-height: rem-calc(map-get($prop, mLineHeight));
+			margin-bottom: rem-calc(map-get($prop, mLineHeight)/2) !important;
+		}
+
+		@include breakpoint(large up) {
+			font-size: rem-calc(map-get($prop, fontSize));
+			line-height: rem-calc(map-get($prop, lineHeight));
+			margin-bottom: rem-calc(map-get($prop, lineHeight)/2) !important;
+		}
+	}
+}
+
+body, p {
+	font-size: $base-font-size-mobile;
+	line-height: $base-line-height-mobile;
+	font-family: $base-font-family;
+	font-weight: 200;
+	letter-spacing: 0.1px;
+	color: color(dark-gray);
+
+	@include breakpoint(medium up) {
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+	}
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 400;
+}
+p {
+	margin-bottom: $base-line-height;
+	font-family: $font-family-serif;
+	color: color(gray);
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+
+// Margin and paddings
+// No-margin top
+.nmt {
+	margin-top: 0;
+}
+.nmb {
+	margin-bottom: 0 !important;
+}
+.text-center {
+	text-align: center;
+}
+.text-light {
+	font-weight: $font-weight-light;
+}
+.text-small {
+	font-size: 80%;
+	line-height: 1.5;
+}
+.text-serif {
+	font-family: $font-family-serif;
+
+	* {
+		font-family: $font-family-serif;
+	}
+}
+.text-sans {
+	font-family: $font-family-sans-serif;
+
+	* {
+		font-family: $font-family-sans-serif;
+	}
+}
+//Change text color to primary color
+.c-p {
+	color: color(primary);
+}
+
+//Link styles
+.plain {
+	color: color(primary);
+	text-decoration: none;
+
+	&:hover {
+		color: color(primary, darker);
+	}
+}
+.alpha{
+	@extend h1;
+}
+.beta {
+	@extend h2;
+}
+.gamma {
+	@extend h3;
+}
+.omega {
+	@extend h4;
+}

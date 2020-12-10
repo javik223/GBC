@@ -1,0 +1,134 @@
+.hero {
+	display: flex;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: rem-calc(300);
+	padding-top: $padding;
+	padding-bottom: $padding;
+	position: relative;
+	z-index: 50;
+
+	@include breakpoint(medium up) {
+		min-height: rem-calc(500);
+	}
+
+	@include breakpoint(large up){
+		min-height: rem-calc(600);
+	}
+
+	&-with-suspended-content {
+		&:before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: rgba(adjust-hue(color(primary), 10%), 0.75);
+			top: 0;
+			left: 0;
+			z-index: 0;
+
+			@include breakpoint(medium up) {
+				display: none;
+			}
+		}
+
+		.content {
+			@include xy-cell();
+			
+			@include breakpoint(medium up) {
+				@include xy-cell(5);
+			}
+
+			@include breakpoint(large up) {
+				@include xy-cell(4);
+			}
+
+			padding: $padding;
+			padding-bottom: $padding * 3;
+			position: relative;
+			z-index: 100;
+
+			@include breakpoint(medium up) {
+				padding: $padding * 2;
+				background-color: color(white);
+			}
+
+			* {
+				@include breakpoint(small only) {
+					color: color(white);
+				}
+			}
+		}
+	}
+
+	&-slider {
+		margin-top: 0;
+		padding-top: 0;
+		width: 100%;
+
+		&_fixed-content {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			padding-top: $padding;
+			
+
+			* {
+				color: color(white);
+			}
+
+			@include breakpoint(medium up) {
+				padding-top: $padding * 3;
+			}
+
+			h1 {
+				@include breakpoint(small only) {
+					font-size: rem-calc(30);
+					line-height: 1.2;
+				}
+			}
+		}
+
+		&_container {
+
+		}
+
+		&_item {
+			img {
+				width: 180%;
+				max-width: none;
+
+				@include breakpoint(medium up) {
+					width: 140%;
+				}
+
+				@include breakpoint(large up){
+					width: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+.cycle-pager {
+	padding: $padding;
+	clear: both;
+	text-align: center;
+	font-size: rem-calc(40);
+
+	@include breakpoint(large up){
+		font-size: rem-calc(50);
+	}
+	span {
+		display: inline-block;
+		padding: $padding * 0.4;
+		color: lighten(color(gray-light), 35%) !important;
+		cursor: pointer;
+	}
+}
+span.cycle-pager-active {
+	color: color(primary) !important;
+}

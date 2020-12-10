@@ -1,0 +1,797 @@
+//Defaults & Framework
+@import "foundation";
+
+@import "framework/settings",
+"framework/grid";
+
+@include foundation-xy-grid-classes();
+
+// Modules
+@import "modules/colors",
+"modules/typography",
+"modules/icons",
+"modules/lists",
+"modules/buttons",
+"modules/forms",
+"modules/spinner",
+"modules/fonts",
+"modules/loader",
+"modules/layout"
+;
+
+// Components
+@import "components/hero",
+"components/accordion",
+"components/truncatedbox"
+;
+
+// Sections
+
+@import "sections/header",
+"sections/footer"
+;
+
+html,
+body {
+	width: 100% !important;
+	overflow-x: hidden;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
+}
+
+// .grid-container {
+// 	display: flex;
+// }
+
+
+p {
+	font-size: rem-calc(18);
+	line-height: 1.6;
+}
+
+// General Styles ----------------------------------------------------------------------------------------
+// Dropdown Navigation
+.dropdown {
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	background-color: color(white);
+	min-width: 100%;
+	top: 20%;
+	box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.1);
+	border-radius: rem-calc(5);
+	display: none;
+	overflow: hidden;
+
+	@include breakpoint(large up) {
+		min-width: 70%;
+	}
+
+	li {
+		&:first-child {
+			padding-top: rem-calc(20);
+		}
+
+		&:last-child {
+			padding-bottom: rem-calc(10);
+		}
+
+		a {
+			width: 100%;
+			display: block;
+			padding: $padding * 0.2 $padding;
+			text-decoration: none;
+			color: color(gray);
+			text-align: center;
+			font-size: rem-calc(14);
+			text-align: center;
+
+			&:hover {
+				color: color(primary);
+			}
+		}
+	}
+
+	.dropdown-wrapper-right & {
+		right: 0;
+
+		/* a {
+			text-align: right;
+		} */
+	}
+
+	.dropdown-wrapper-left & {
+		left: 0;
+	}
+}
+
+.dropdown-wrapper {
+	position: relative;
+	z-index: 5000;
+
+	>.button {
+		z-index: 1001;
+		position: relative;
+	}
+}
+
+
+// ---------------------------------------------------------------------------------------------------------
+.side-image-wrapper {
+	max-height: rem-calc(350);
+	overflow-y: hidden;
+
+	@include breakpoint(medium up) {
+		position: absolute;
+		right: 0;
+		top: 0;
+		max-width: 45%;
+		max-height: none;
+	}
+
+	.careers & {
+		height: 100%;
+
+		img {
+			@include breakpoint(medium only) {
+				height: 100%;
+				max-width: none;
+			}
+
+			@include breakpoint(large up) {
+				height: 100%;
+				max-width: none;
+			}
+		}
+	}
+}
+
+.careers {
+	@include breakpoint(large up) {
+		padding-bottom: $padding * 10;
+	}
+
+	.content {
+		padding-top: $padding;
+	}
+}
+
+.contact {
+	.content {
+		background-color: $white;
+		padding: rem-calc(60);
+		margin-top: rem-calc(40);
+		margin-bottom: rem-calc(40)
+	}
+}
+
+// The team  ---------------------------------------------------------------------------------------------
+.team {
+	&_member {
+		@include xy-cell(6);
+		
+		@include breakpoint(large up) {
+			@include xy-cell(3);
+		}
+		overflow: hidden;
+		position: relative;
+		color: color(white);
+		transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+		transform: center center;
+		background-color: color(white);
+		padding: rem-calc(1);
+
+		@include breakpoint(medium only) {
+			padding-bottom: 0;
+
+			&:nth-child(2n+1) {
+				padding-left: 0;
+				clear: left;
+			}
+
+			&:nth-child(2n) {
+				padding-right: 0;
+			}
+		}
+
+		@include breakpoint(small only) {
+			&:nth-child(2n+1) {
+				padding-left: 0;
+				clear: left;
+			}
+
+			&:nth-child(2n) {
+				padding-right: 0;
+			}
+		}
+
+		@include breakpoint(large up) {
+			&:nth-child(4n+1) {
+				padding-left: 0;
+				clear: left;
+			}
+
+			&:nth-child(4n) {
+				padding-right: 0;
+			}
+		}
+
+		&_profile {
+			width: 100%;
+			position: absolute;
+			bottom: $padding;
+			left: 0;
+			padding-left: $padding;
+			padding-right: $padding;
+		}
+
+		&_name {
+			@extend .text-serif;
+			@extend .beta;
+			margin-bottom: 0 !important;
+			max-width: 80%;
+			position: relative;
+			line-height: 1;
+
+			@include breakpoint(large up) {
+				font-size: rem-calc(32);
+				line-height: 1.1;
+			}
+		}
+
+		&_designation {
+			@extend .text-sans;
+			text-transform: uppercase;
+			letter-spacing: rem-calc(3);
+			margin-bottom: 0;
+			position: relative;
+
+			@include breakpoint(small only) {
+				letter-spacing: rem-calc(1);
+				font-size: rem-calc(10) !important;
+			}
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.15);
+				filter: grayscale(0%);
+			}
+		}
+	}
+
+	&_image {
+		float: left;
+		overflow: hidden;
+	}
+
+	img {
+		filter: grayscale(90%);
+		transform-origin: top center;
+		transition: all 2s ease-in-out;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+	}
+
+	.overlay {
+		position: absolute;
+		background-image: linear-gradient(-180deg, rgba(35, 109, 197, 0.00) 8%, #000000 100%);
+		height: 60%;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		padding: $padding;
+	}
+
+	.icon {
+		position: absolute;
+		right: $padding;
+		bottom: $padding;
+		backface-visibility: hidden;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	&-fade {
+		.team_member {
+			opacity: 0.2;
+		}
+	}
+
+	&-desktop {
+		.overlay {
+			visibility: hidden;
+		}
+	}
+
+	.active {
+		opacity: 1;
+		//transform: scale(1.05);
+		transform-orign: center center;
+		z-index: 10000;
+		box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+	}
+}
+
+
+
+// ----------------------------------------------
+.client-list {
+	text-align: center;
+	@include xy-cell();
+
+	img {
+		display: inline-block;
+		padding: $padding;
+		width: 50%;
+		filter: grayscale(100%);
+		opacity: 0.3;
+		transition: all 0.5s ease-out;
+
+		@include breakpoint(medium up) {
+			float: none;
+			width: 20%;
+		}
+
+		&:hover {
+			filter: grayscale(0);
+			opacity: 1;
+		}
+	}
+}
+
+.client-list_wrapper {
+	width: 100%;
+	position: relative;
+
+	.client-list_contrrols {
+		width: 100%;
+		position: absolute;
+		top: 31%;
+		z-index: 10000;
+
+		.icon {
+			font-size: rem-calc(30);
+			opacity: 0.3;
+			transition: opacity 0.6s ease-out;
+			padding-left: $padding;
+			padding-right: $padding;
+			margin-left: -$padding;
+			z-index: 10000;
+			cursor: pointer;
+			display: inline-block;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+	}
+}
+
+
+
+// Profile --------------------------------------------------------
+.side-content {
+	overflow: hidden;
+
+	@include breakpoint(medium only) {
+		max-width: 60%;
+		margin-left: $padding;
+		padding-bottom: $padding;
+		position: relative;
+		margin-top: rem-calc(-170);
+
+		img {
+			float: right;
+			margin-right: -$padding * 2;
+		}
+	}
+
+	@include breakpoint(large up) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 60%;
+		max-width: 40%;
+	}
+}
+
+
+// Publications ------------------------------------------------------------------------------------------------------------------
+.publications {
+	>div {
+		@include xy-cell();
+		@include breakpoint(medium up) {
+			@include xy-cell(6);
+		}
+		@include breakpoint(large up) {
+			@include xy-cell(4);
+		}
+
+		background-color: lighten(adjust-hue(color(primary), 5%), 2%);
+		border-bottom: rem-calc(1) solid color(white);
+		padding: $padding;
+		color: color(white);
+		position: relative;
+		min-height: rem-calc(350);
+
+		@include breakpoint(medium up) {
+			height: rem-calc(500);
+		}
+
+		p {
+			color: color(white);
+			@extend .text-sans;
+			font-size: 85%;
+			line-height: 1.6;
+			opacity: 0.8;
+		}
+
+		@include breakpoint(small only) {
+			border-bottom: rem-calc(1) solid color(white);
+		}
+
+		@include breakpoint(medium only) {
+			&:nth-child(2n+2) {
+				border-right: none;
+				border-left: rem-calc(2) solid color(white);
+				box-sizing: border-box;
+			}
+
+		}
+
+		@include breakpoint(medium up) {
+			padding: $padding * 2;
+		}
+
+		@include breakpoint(large up) {
+			&:nth-child(3n+2) {
+				border-right: rem-calc(1) solid color(white);
+				border-left: rem-calc(1) solid color(white);
+				box-sizing: border-box;
+			}
+		}
+
+	}
+
+	.publication_title {
+		@extend .text-serif;
+		@extend .gamma;
+	}
+
+	.publication_donwload-link {
+		font-weight: bold;
+		position: absolute;
+		bottom: $padding;
+		left: $padding;
+		text-decoration: none;
+		color: color(white);
+
+		@include breakpoint(medium up) {
+			bottom: $padding * 2;
+			left: $padding * 2;
+		}
+
+		&:hover {
+			color: lighten(color(primary), 40%);
+		}
+	}
+}
+
+.s-hide {
+	@include breakpoint(small only) {
+		display: none;
+	}
+}
+
+.s-center {
+	@include breakpoint(small only) {
+		text-align: center;
+
+		* {
+			margin-top: $padding;
+		}
+	}
+}
+
+// Cases --------------------------------------------------------------------------------------
+.cases {
+	.case {
+		@include xy-cell(6);
+
+		@include breakpoint(medium up) {
+			@include xy-cell(4);
+		}
+		
+		@include breakpoint(large up) {
+			@include xy-cell(3);
+		}
+
+		background-color: lighten(adjust-hue(color(primary), 5%), 2%);
+		border-bottom: rem-calc(1) solid color(white);
+		border-right: rem-calc(1) solid color(white);
+		min-height: rem-calc(250);
+		padding-bottom: $padding * 2;
+		color: color(white);
+		padding: $padding;
+		box-sizing: border-box;
+		text-decoration: none;
+		transition: background-color 0.3s ease-in-out;
+
+		@include breakpoint(small only) {
+			&:nth-child(2n) {
+				border-right: none;
+			}
+		}
+
+		@include breakpoint(medium only) {
+			&:nth-child(3n) {
+				border-right: none;
+			}
+		}
+
+		@include breakpoint(large up) {
+			&:nth-child(4n) {
+				border-right: none;
+			}
+		}
+
+		@include breakpoint(medium up) {
+			padding: $padding * 2;
+			min-height: rem-calc(320);
+		}
+
+		&:hover {
+			background-color: adjust-hue(color(primary), 6%);
+		}
+	}
+}
+
+.case {
+	position: relative;
+
+	&_title {
+		@extend .gamma;
+		@extend .text-serif;
+		@extend .nmb;
+		padding-bottom: $padding * 0.2;
+		line-height: 1.2;
+	}
+
+	&_client {
+		@extend .text-sans;
+		text-transform: uppercase;
+		letter-spacing: rem-calc(1);
+		color: color(white);
+		font-size: rem-calc(12);
+		line-height: 1.6;
+		margin-top: 0;
+
+		@include breakpoint(medium up) {
+			font-size: rem-calc(14);
+			line-height: 1.6;
+		}
+	}
+
+	&_view {
+		position: absolute;
+		bottom: $padding;
+		left: $padding;
+		font-size: rem-calc(12);
+		text-transform: uppercase;
+		letter-spacing: rem-calc(1);
+
+		@include breakpoint(medium up) {
+			bottom: $padding * 2;
+			left: $padding * 2;
+			font-size: rem-calc(14);
+		}
+
+		.icon {
+			display: inline-block;
+			position: relative;
+			top: rem-calc(2);
+		}
+
+	}
+}
+
+.cases-details {
+	@include breakpoint(small only) {
+		padding-left: $padding;
+	}
+}
+
+// Areas of inter5st -------------------------------------------------------------------------------------------------------------
+.areas-of-interest {
+	width: 100%;
+	text-align: center;
+	margin-top: $padding;
+	padding-top: $padding;
+	position: relative;
+
+	@include breakpoint(medium up) {
+		margin-top: $padding * 2;
+	}
+
+	&:before {
+		content: '';
+		width: rem-calc(100);
+		height: rem-calc(1);
+		background-color: lighten(color(gray-light), 30%);
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	.heading {
+		@extend .omega;
+		@extend .c-p;
+		letter-spacing: rem-calc(2);
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.list {
+		letter-spacing: rem-calc(1);
+		text-transform: uppercase;
+		margin-left: 0;
+
+		li {
+			margin-bottom: $padding * 0.5;
+			font-weight: 700;
+			color: lighten(color(gray-light), 25%);
+			font-size: 95%;
+		}
+	}
+}
+
+.disable-scroll {
+	overflow: hidden;
+}
+
+
+// Sitemap
+.site-links {
+	>li {
+		@extend .gamma;
+		text-transform: uppercase;
+
+		a {
+			text-decoration: none;
+			color: color(primary);
+			letter-spacing: rem-calc(1);
+
+			&:hover {
+				font-weight: bold;
+			}
+		}
+
+		ul {
+			padding-top: $padding;
+			padding-bottom: $padding;
+
+			li {
+				font-size: rem-calc(14);
+				margin-bottom: 0;
+
+				a {
+					color: color(gray-light);
+
+					&:hover {
+						color: color(primary);
+					}
+				}
+			}
+		}
+	}
+}
+
+.credits {
+	a {
+		color: color(primary);
+		text-decoration: none;
+		font-size: rem-calc(24);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+// ----------------------------------------------
+.news-container {
+	>div {
+		@include xy-cell(10);
+		@include breakpoint(medium up) {
+			@include xy-cell(8);
+			@include xy-cell-offset(2);
+		}
+		@include breakpoint(large up) {
+			@include xy-cell(8);
+			@include xy-cell-offset(2);
+		}
+		@include xy-cell-offset(1);
+		background-color: color(white);
+		padding: rem-calc(16);
+		text-align: center;
+		margin-bottom: rem-calc(50);
+
+		h1 {
+			@extend h2;
+			@extend .text-serif;
+			color: color(primary);
+		}
+
+		@include breakpoint(medium up) {
+			padding: rem-calc(48);
+		}
+
+		@include breakpoint(large up) {
+			padding: rem-calc(64);
+		}
+
+		p {
+			@extend .text-sans;
+		}
+	}
+}
+
+.news-body {
+	@include xy-cell();
+	@include xy-cell(10);
+	@include xy-cell-offset(1);
+	@include breakpoint(medium up) {
+		@include xy-cell(8);
+		@include xy-cell-offset(2);
+		padding-top: rem-calc(40);
+	}
+	// @extend .end;
+	float: right;
+	padding-top: rem-calc(20);
+
+	@extend .text-sans;
+
+	img {
+		padding-right: rem-calc(16);
+		padding-block-end: rem-calc(16);
+	}
+
+	a {
+		color: color(primary);
+	}
+}
+
+.striped-background {
+	background-image: url(/assets/images/stripes.svg);
+	background-position: 150% top;
+	background-repeat: no-repeat;
+
+	@include breakpoint(medium up) {
+		background-position: 100% top;
+	background-repeat: no-repeat;
+	}
+}
+
+.practice-intro {
+	margin-top: rem-calc(-120) !important;
+	padding-top: rem-calc(120);
+
+		@include breakpoint(small only) {
+			background-position: 1500% top;
+		}
+}
+
+.striped--extended {
+	background-position: 120% top;
+	background-repeat: no-repeat;
+
+	@include breakpoint(small only) {
+		background-position: 1500% top;
+	}
+}

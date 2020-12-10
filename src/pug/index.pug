@@ -1,4 +1,91 @@
 extends _layout
 block content
-  include /page-blocks/homepage/_schedule
-  include /page-blocks/homepage/_sponsors
+  .hero.hero-slider
+    .hero-slider_fixed-content
+      .grid-container
+        .grid-x.mt-pad
+          h1.cell.medium-11.large-6 A modern law firm with a flair for business
+    .hero-slider_container.cycle-slideshow(data-cycle-slides='.hero-slider_item')
+      .hero-slider_item
+        img(src='/assets/img/gbc-modern-law-firm.jpg' alt='GBC Modern Law Firm')
+      .hero-slider_item
+        img(src='/assets/img/gbc-corporate-practice-banner.jpg' alt='GBC Corporate & Business Practice')
+      .hero-slider_item
+        img(src='/assets/img/gbc-modern-law-firm.jpg' alt='GBC Modern Law Firm')
+      .cycle-pager
+  .grid-container.section--large.position-relative.striped-background.full.practice-intro
+    .grid-container
+      .grid-x
+        .cell.medium-10.large-8.end.section--large-padding
+          p.h4.cell-color-dark-gray.text-sans
+            | We are well drilled in both national and international business transactions. Our practice cover areas such as Oil &amp; Gas, Power, Corporate, Business Advisory, Ligitation and IP. Our expertise can be felt in our work with businesses and organisations of various shape and size, both large and small
+          .grid-x.grid-margin-y.bio__icons.small-up-3.large-up-6.section--medium
+            .cell.bio__icon-wrapper
+              img(src='/assets/icons/oil-and-gas.svg' alt='Oil and Gas')
+            .cell.bio__icon-wrapper
+              img(src='/assets/icons/power.svg' alt='Power')
+            .cell.bio__icon-wrapper
+              img(src='/assets/icons/corporate.svg' alt='Corporate')
+            .cell.bio__icon-wrapper
+              img(src='/assets/icons/business-advisory.svg' alt='Business Advisory')
+            .cell.bio__icon-wrapper
+              img(src='/assets/icons/litigation.svg' alt='Ligitation')
+            .cell.bio__icon-wrapper
+              img(src='/assets/icons/ip.svg' alt='IP')
+          .section__cta
+            a.button(href='/case-studies.html')
+              span.icon.icon-caret-left
+              | Cases &amp; Practice Area
+  section.grid-container.section--large.publication-area
+    .grid-x
+      h1.cell.c-p.beta.text-center.nmb.section--medium.text-sans Latest Publications
+    .cell.grid-x.grid-margin-x.section--medium.medium-up-3
+      .cell.medium-6.large-3
+        a(href='/publication.html')
+          article.publication
+            .publication__image-wrapper
+              img(src='/assets/images/publication-1.png' alt='Publication image')
+            p.publication__content
+              | Federal Character, Indebtedness to Government etc To Be Considered In The Upcoming Marginal Fields Bid Rounds
+      .cell.medium-6.large-3
+        a(href='/publication.html')
+          article.publication
+            .publication__image-wrapper
+              img(src='/assets/images/publication-2.png' alt='Publication image')
+            p.publication__content The Finance Act 2020: Rejigging the Nigerian Fiscal Landscape
+      .cell.medium-6.large-3
+        a(href='/publication.html')
+          article.publication
+            .publication__image-wrapper
+              img(src='/assets/images/publication-3.png' alt='Publication image')
+            p.publication__content The Finance Act 2020: Rejigging the Nigerian Fiscal Landscape
+    .section__cta.text-center
+      a.button(href='/case-studies.html')
+        span.icon.icon-caret-left
+        | See all publications
+  section.grid-container.section--large.clients-area
+    h1.c-p.beta.text-center.nmb Our Clients
+    .grid-x.align-center.section--small
+      p.cell.medium-9.large-6.text-center
+        | Our client list spans the oil and gas, construction, banking and financial institutions, here are a list of some of our clients (past and present).
+    .clients-carousel.js-clients-carousel
+      .clients-carousel__slide
+        img(src='/assets/images/clients/baker-hughes.png' alt='Baker Hughes')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/equinor.png' alt='Equinor')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/emerging-africa.png' alt='Emerging Africa')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/exxon-mobil.png' alt='Exxon Mobil')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/rockwell-automation.png' alt='Rockwell Automation')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/baker-hughes.png' alt='Baker Hughes')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/equinor.png' alt='Equinor')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/emerging-africa.png' alt='Emerging Africa')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/exxon-mobil.png' alt='Exxon Mobil')
+      .clients-carousel__slide
+        img(src='/assets/images/clients/rockwell-automation.png' alt='Rockwell Automation')
