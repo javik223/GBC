@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "iconfonts";
+  src: url("/assets/fonts/iconfonts.eot");
+  src: url("/assets/fonts/iconfonts.eot?#iefix") format("eot"), url("/assets/fonts/iconfonts.woff2") format("woff2"), url("/assets/fonts/iconfonts.woff") format("woff"), url("/assets/fonts/iconfonts.ttf") format("truetype"), url("/assets/fonts/iconfonts.svg#iconfonts") format("svg");
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before, .icon-facebook:before, .icon-instagram:before, .icon-left-arrow:before, .icon-right-arrow:before, .icon-twitter:before, .icon-youtube:before {
+  font-family: "iconfonts";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.icon-calendar:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-left-arrow:before {
+  content: "";
+}
+
+.icon-right-arrow:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-youtube:before {
+  content: "";
+}
+
+/*# sourceMappingURL=../sass-maps/components/iconfonts.css.map */
