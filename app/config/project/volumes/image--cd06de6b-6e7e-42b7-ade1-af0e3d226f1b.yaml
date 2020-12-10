@@ -1,0 +1,9 @@
+handle: image
+hasUrls: true
+name: Image
+settings:
+  path: assets/images/
+  url: /assets/images/
+sortOrder: 1
+type: craft\volumes\Local
+url: null

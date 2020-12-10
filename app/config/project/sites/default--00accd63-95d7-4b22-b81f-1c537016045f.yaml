@@ -1,8 +1,0 @@
-baseUrl: $PRIMARY_SITE_URL
-handle: default
-hasUrls: true
-language: en
-name: 'Lagos Fashion Week'
-primary: true
-siteGroup: f9d3b62b-d8ce-401a-80c0-e3a9df234fef
-sortOrder: 1

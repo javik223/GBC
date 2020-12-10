@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: f7f0a86b-72f3-4d8b-b7dc-63c89d9bf313
+handle: relevantExperiencesIntro
+instructions: ''
+name: 'Relevant Experiences Intro'
+searchable: true
+settings:
+  cleanupHtml: ''
+  columnType: text
+  configFile: Standard.json
+  purifyHtml: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

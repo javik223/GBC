@@ -1,0 +1,26 @@
+{% extends '_layout' %}
+{% block content %}
+
+	<div class="grid-container container-extra-pad container-gray full">
+		<div class="grid-container">
+			<div
+				class="grid-x mt-pad">{#<div class="cell medium-6 medium-offset-3 s-hide end">
+					            <a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Back to all news item</a>
+					        </div>#}
+			</div>
+
+			<div class="grid-x mt-pad">
+				<div class="cell medium-6 medium-offset-3 end">
+					<h1 class="c-p beta text-center">{{ entry.title }}</h1>
+					<h4 class="text-center mt-m text-serif">{{ entry.postDate|date('l F d, Y') }}</h4>
+				</Div>
+			</div>
+
+			<div class="grid-x">
+				<div class="news-body">
+					{{ entry.body }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+fieldLayouts:
+  31ad74d5-4d35-4ce3-8aab-507b24846169:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 1
+handle: casesAndResultsLanding
+hasTitleField: false
+name: 'Cases and Results Landing'
+section: 6a1f383b-9cff-4374-9412-c240e05e02b2
+sortOrder: 0
+titleFormat: '{section.name|raw}'

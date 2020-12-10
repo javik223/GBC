@@ -1,0 +1,24 @@
+contentColumnType: string
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: banners
+instructions: ''
+name: Banners
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Upload banner Image'
+  singleUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+  singleUploadLocationSubpath: ''
+  sources:
+    - 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+  useSingleFolder: ''
+  viewMode: large
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

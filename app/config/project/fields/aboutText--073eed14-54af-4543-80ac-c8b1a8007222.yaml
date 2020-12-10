@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: aboutText
+instructions: 'Text for the about us landing page'
+name: 'About Text'
+searchable: true
+settings:
+  cleanupHtml: ''
+  columnType: text
+  configFile: Standard.json
+  purifyHtml: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

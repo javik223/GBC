@@ -1,0 +1,91 @@
+{% if craft.request.firstSegment == "" %}
+	<title>{{ default.seoTitle }}</title>
+{% else %}
+    {% if entry.title %}
+    	<title>{{ entry.title }} | {{ siteName }}</title>
+    	{% else %}
+    	  	<title>{{ default.seoTitle }} | {{ siteName }}</title>
+    {% endif %}
+{% endif %}
+
+{% if entry.seoDescription %}
+	<meta name="description" content="{{ entry.seoDescription }}">
+	{% else %}
+	  	<meta name="description" content="{{ default.seoDescription }}">
+{% endif %}
+{% if entry.seoKeywords %}
+	<meta name="keywords" content="{{ entry.seoKeywords }}">
+	{% else %}
+	  	<meta name="keywords" content="{{ default.seoKeywords }}">
+{% endif %}
+{% if entry.seoCanonical %}
+	<link rel="canonical" href="{{ entry.seoCanonical }}">
+	{% else %}
+	  	<link rel="canonical" href="{{ entry.url }}">
+{% endif %}
+
+<!-- Open Graph -->
+{% if entry.title %}
+	<meta property="og:title" content="{{ entry.title }} | {{ siteName }}">
+	{% else %}
+	  	<meta property="og:title" content="{{ default.seoTitle }} | {{ siteName }}">
+{% endif %}
+
+{% if entry.seoDescription %}
+	<meta property="og:description" content="{{ entry.seoDescription }}">
+	{% else %}
+	  	<meta property="og:description" content="{{ default.seoDescription }}">
+{% endif %}
+
+{% if entry.seoAuthor %}
+	<meta property="og:author" content="{{ entry.seoAuthor }}">
+	{% else %}
+	  	<meta property="og:author" content="{{ default.seoAuthor }}">
+{% endif %}
+<meta property="og:site_name" content="CETEnergy">
+
+{% if entry.seoCanonical %}
+	<meta property="og:url" content="{{ entry.seoCanonical }}">
+	{% else %}
+	  	<meta property="og:url" content="{{ entry.url }}">
+{% endif %}
+
+{% if entry.seoImage|length > 0 and entry.seoType != 'profile' %}
+	<meta property="og:image" content="{{ siteUrl }}{{ entry.seoImage.first.url('small') }}">
+	<meta property="og:image:width" content="{{ entry.seoImage.first.width('small') }}">
+	<meta property="og:image:height" content="{{ entry.seoImage.first.height('small') }}">
+
+	{% elseif entry.image|length > 0 %}
+		<meta property="og:image" content="{{ siteUrl }}{{ entry.image.first.url('small') }}">
+		<meta property="og:image:width" content="{{ entry.image.first.width('small') }}">
+		<meta property="og:image:height" content="{{ entry.image.first.height('small') }}">
+
+	{% elseif entry.thumbnail|length > 0 %}
+		<meta property="og:image" content="{{ siteUrl }}{{ entry.thumbnail.first.url('small') }}">
+		<meta property="og:image:width" content="{{ entry.thumbnail.first.width('small') }}">
+		<meta property="og:image:height" content="{{ entry.thumbnail.first.height('small') }}">
+
+	{% else %}
+	   {% if entry.seoType == 'profile' %}
+	   		    <meta property="og:image" content="{{ siteUrl }}{{ default.thumbnail.first.url('small') }}">
+	   			<meta property="og:image:width" content="{{ default.thumbnail.first.width('small') }}">
+	   			<meta property="og:image:height" content="{{ default.thumbnail.first.height('small') }}">
+		{% else %}
+		    <meta property="og:image" content="{{ siteUrl }}{{ default.seoImage.first.url('small') }}">
+			<meta property="og:image:width" content="{{ default.seoImage.first.width('small') }}">
+			<meta property="og:image:height" content="{{ default.seoImage.first.height('small') }}">
+	   {% endif %}
+	   
+{% endif %}
+
+{% if entry.seoType %}
+	<meta property="og:type" content="{{ entry.seoType }}">
+	{% else %}
+	  	<meta property="og:type" content="{{ default.seoType }}">
+{% endif %}
+
+{% if entry.seoType == "profile" %}
+	{% set profileName = entry.title|split(' ') %}
+	<meta property="first_name" content="{{ profileName[0] }}">
+	<meta property="last_name" content="{{ profileName[1] }}">
+{% endif %}

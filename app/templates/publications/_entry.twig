@@ -1,0 +1,137 @@
+{% extends '_layout' %}
+{% block content %}
+	<main class="publication-post">
+		<section class="publication-post__hero">
+			{% set featuredImage = entry.featuredImage.one() %}
+			{% if featuredImage | length %}
+				<img src="{{ entry.featuredImage.one().url() }}" alt="{{ entry.title }}">
+			{% else %}
+				<img src="/assets/images/empty-state.svg" alt="{{ entry.title }}">
+			{% endif %}
+		</section>
+
+		<div class="grid-container grid-x cell small-11 publication-post__content pbb">
+			<div class="publication-post__intro text-center">
+				<h4 class="color-white text-uppercase letter-spacing-4">Publications</h4>
+
+				<div class="publication-post__content-card grid-x align-center">
+					<div class="cell small-11 medium-10 large-8 section--large">
+						<div class="text-center">
+							<h4 class="text-uppercase">{{ entry.postDate | date("F d, Y") }}</h4>
+							<div class="section--xsmall">
+								<h1>{{ entry.title }}</h1>
+							</div>
+
+							{# Share #}
+							<div class="section--small grid-x grid-margin-x align-center align-middle">
+								<div class="cell shrink">
+									<h4 class="text-uppercase margin-0">Share</h4>
+								</div>
+								<div class="grid-x grid-margin-x small-up-4 align-middle">
+									<div class="cell">
+										{% include "_icons/_share" %}
+									</div>
+									<div class="cell">
+										<a href="{{ craft.simpleSharing.link(entry.url, 'facebook') }}" target="_blank">
+											<div class="round-padded-icon round-padded-icon--gray">
+												{% include "_icons/_facebook" %}
+											</div>
+										</a>
+									</div>
+									<div class="cell">
+										<a href="{{ craft.simpleSharing.link(entry.url, 'twitter') }}" target="_blank">
+											<div class="round-padded-icon round-padded-icon--gray">
+												{% include "_icons/_twitter" %}
+											</div>
+										</a>
+									</div>
+									<div class="cell">
+										<a href="{{ craft.simpleSharing.link(entry.url, 'linkedin') }}" target="_blank">
+											<div class="round-padded-icon round-padded-icon--gray">
+												{% include "_icons/_linkedin" %}
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							{# /Share #}
+						</div>
+					</div>
+					<div class="grid-x align-center">
+						<div class="cell small-11 medium-9 large-7 text-left section--medium text-serif h5">
+							{{ entry.article }}
+						</div>
+					</div>
+
+					{# Downloadable #}
+					{% set downloadables = entry.publicationDownload.all() %}
+					{% if downloadables | length %}
+						<div class="feature-card cell medium-10 align-middle pbb">
+							<div class="grid-x align-center grid-margin-y section--medium">
+
+								{% for item in downloadables %}
+									<div class="cell small-11 grid-x grid-margin-x grid-margin-y align-middle feature-card__content pbb">
+										{% set cover = item.coverImage.one() %}
+										{% set publicationFile = item.publicationFile.one() %}
+										{% if cover | length %}
+											<div class="cell medium-6 large-4 small-centered feature-card__image-wrapper text-center">
+												<a href="{{ publicationFile.url() }}" target="_blank" title="{{ entry.title }}">
+													<img src="{{ cover.url('coverImage') }}" alt="{{ entry.title }}" width="150"></a>
+											</div>
+										{% endif %}
+										<div class="cell medium-9 large-6 large-offset-1 grid-y grid-margin-y small-centered text-center">
+											<a class="feature-card__button" href="{{ publicationFile.url() }}" target="_blank">Read full publication<span class="icon icon-caret-right"></span>
+											</a>
+										</div>
+									</div>
+								{% endfor %}
+
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+
+		{% set publications = craft.entries({
+      section: 'publications',
+      id: 'not ' ~ entry.id,
+      limit: 4
+    }).all() %}
+		{# Other publications #}
+
+		{% if publications | length %}
+			<section class="grid-container section--large publication-area publication-area--wider">
+				<h1 class="c-p beta text-center nmb section--medium">Other Publications</h1>
+				<div class="grid-x grid-margin-x section--medium pbb">
+					{% for publication in publications %}
+						<div class="cell medium-4 large-3">
+							<a href="{{ publication.url }}" title="{{ publication.title }}">
+								<article class="publication">
+									<div class="publication__image-wrapper">
+										{% set image = publication.featuredImage.one() %}
+										{% if image | length %}
+											<img src="{{ image.url('publicationThumbnail') }}" alt="{{ publication.title }}"/>
+										{% else %}
+											<img src="/assets/images/empty-state.svg" alt="{{ publication.title }}"/>
+										{% endif %}
+									</div>
+									<p class="publication__content text-sans">{{ publication.title }}</p>
+								</article>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="section__cta text-center">
+					<a href="/publications" class="button">
+						<span class="icon icon-caret-left"></span>See all publications</a>
+				</div>
+			</section>
+		{% endif %}
+	</main>
+
+	<div class="pbb">&nbsp;</div>
+	<div class="pbb">&nbsp;</div>
+{% endblock %}

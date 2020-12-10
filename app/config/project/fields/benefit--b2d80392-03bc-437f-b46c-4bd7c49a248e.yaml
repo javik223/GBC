@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 566f6c36-8866-41a7-bf23-823bf1eda19b
+handle: benefit
+instructions: ''
+name: Benefit
+searchable: true
+settings:
+  cleanupHtml: '1'
+  columnType: text
+  configFile: Simple.json
+  purifyHtml: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

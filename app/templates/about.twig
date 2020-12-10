@@ -1,0 +1,151 @@
+{% extends '_layout' %}
+{% css "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" %}
+{% css "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" %}
+
+{% block content %}
+<div class="container container-extra-pad grid-container position-relative about">
+	<div class="grid-x align-center">
+		<div class="cell medium-8 text-center">
+			<h1 class="c-p beta text-center nmb">About Us</h1>
+			{{ entry.aboutText }}
+		</div>
+	</div>
+</div>
+
+
+{# Vision & Mission #}
+<div class="grid-container mission-vision-area pbb">
+	<div class="grid-x grid-margin-x grid-margin-y">
+		<div class="cell medium-6 highlight-card">
+			<div class="grid-y section--small-padding">
+				<h4 class="highlight-card__title">Our Vision</h4>
+				<div class="grid-x align-center text-center">
+					<h6 class="cell large-10 text-sans h5">{{ entry.ourVision | striptags }}</h6>
+				</div>
+			</div>
+		</div>
+		<div class="cell medium-6 highlight-card">
+			<div class="grid-y section--small-padding">
+				<h4 class="highlight-card__title">Our Mission</h4>
+				<div class="grid-x align-center text-center">
+					<h6 class="cell large-10 text-sans h5">{{ entry.ourMission | striptags }}</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{# Practice Summary #}
+	{% set ourPracticeSummary = entry.ourPracticeSummary %}
+	<div class="section--medium grid-x align-center">
+		<div class="bio cell medium-9 large-7">
+			<h4 class="cellor-black text-sans text-center pbb h5">{{ ourPracticeSummary.body | striptags }}</h4>
+			<div class="margin-top-2">&nbsp;</div>
+
+			{# Icons #}
+			{# Icons #}
+			{% set icons = ourPracticeSummary.icons.all() %}
+			{% if icons | length %}
+				<div class="grid-x grid-margin-y align-center bio__icons small-up-3 large-up-6">
+					{% for icon in icons %}
+						<div class="cell bio__icon-wrapper">
+							<img src="{{ icon.url() }}" alt="{{ icon.title }}">
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+			{# /Icons #}
+
+			{% set practiceAreaLink = ourPracticeSummary.practiceLink %}
+			<div class="section__cta text-center">
+				<a href="{{ practiceAreaLink.url() }}" class="button">
+					<span class="icon icon-caret-left"></span>
+					{{ practiceAreaLink.title }}</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{# Our Team Summary #}
+{% set ourTeamSummary = entry.ourTeamSummary %}
+<div class="container-gray about-team-intro">
+	<div class="grid-container">
+		<div class="grid-x section--large">
+			<div class="cell medium-9 large-6 grid-y align-spaced">
+				<h4 class="h5 cellor-black text-sans">{{ ourTeamSummary.body | striptags }}</h4>
+
+				{# Our Team Link #}
+				{% set teamLink = ourTeamSummary.teamLink %}
+				{% if teamLink | length %}
+					<div class="section__cta">
+						<a href="{{ teamLink.url() }}" class="button">{{ teamLink.title }}
+							<span class="icon icon-caret-right"></span>
+						</a></div>
+				</div>
+			{% endif %}
+
+
+			{# Our Team images #}
+			{% set teamImages = ourTeamSummary.displayImages.all() %}
+			{% if teamImages | length %}
+				<div class="cell small-2 medium-3 about-team-intro__images">
+					{% for image in teamImages %}
+						<div>
+							<img src="{{ image.url() }}" alt="{{ image.title }}">
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+			{# /Our Team Images #}
+
+		</div>
+	</div>
+</div>
+
+{# Working with us #}
+{% set workingWithUs = entry.workingWithUs %}
+{% if workingWithUs | length %}
+	<div class="grid-container">
+		<div class="grid-x section--large align-center text-center">
+			<div class="cell small-9 large-6">
+				{{ workingWithUs.body }}
+
+				{% set workingWithUsLink = workingWithUs.workingWithUsLink %}
+				{% if workingWithUsLink | length %}
+					<div class="section__cta grid-x align-center">
+						<a class="button cell large-6" href="{{ workingWithUsLink.url() }}">
+							<div class="grid-x align-middle">
+								<div class="cell auto">{{ workingWithUsLink.title }}</div>
+								<div class="cell shrink icon icon-caret-right"></div>
+							</div>
+						</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{# Clients #}
+{% set e = craft.entries({
+		section: 'aboutGbc'
+	}).one() %}
+{% set clients = e.clients.all() %}
+{% if clients | length %}
+	<section class="grid-container section--large clients-area">
+		<h2 class="c-p beta text-center nmb">Our Clients</h2>
+		<div class="grid-x align-center section--small">
+			<p class="cell medium-6 text-center text-sans">{{ e.clientsText | striptags }}</p>
+		</div>
+
+		<div class="clients-carousel js-clients-carousel text-center">
+			{% for client in clients %}
+				<div class="clients-carousel__slide">
+					<img src="{{ client.clientLogo.one().url() }}" alt="{{ client.clientName }}"/>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}
+{# /Clients #}
+{% endblock %}

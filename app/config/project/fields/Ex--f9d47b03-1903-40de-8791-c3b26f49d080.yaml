@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: f7f0a86b-72f3-4d8b-b7dc-63c89d9bf313
+handle: Ex
+instructions: ''
+name: Expertise
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_ex}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

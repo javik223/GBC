@@ -1,0 +1,123 @@
+fieldLayouts:
+  e1e50f8e-6c77-4fac-91bc-5f2b58942fc6:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: d13b25d5-6cd1-4c18-af12-a90effd123c8
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8592e470-e067-4f2a-ae62-27d0efd7d339
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 073eed14-54af-4543-80ac-c8b1a8007222
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6852a200-6a77-4009-be6a-3d3200a98f9c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1348a1a2-b520-4823-bbca-8243b3aac257
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9bcd7ec5-7e2d-4f6f-bff5-fd11e3677be5
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 464b2724-28a6-4add-9d3b-fac19ca257de
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e500c2e9-0005-41cf-b263-ba1d1c8f4b40
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: About
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Seo
+        sortOrder: 2
+handle: aboutGbc
+hasTitleField: true
+name: 'About GBC'
+section: af6a593f-ab7c-46ae-9de5-c246cce37a6d
+sortOrder: 0
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

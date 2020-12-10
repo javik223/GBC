@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: team
+name: Team
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  3e993b0c-6b63-496e-9fa9-e9dbb42c592b:
+    enabledByDefault: true
+    hasUrls: true
+    template: team/_entry
+    uriFormat: 'team/{slug}'
+structure:
+  maxLevels: null
+  uid: 9d1c7014-092b-4ffe-9eb2-817546771332
+type: structure

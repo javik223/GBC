@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: f15b7dbf-66f4-471f-8824-a481ef280f6c
+handle: body
+instructions: ''
+name: Body
+searchable: true
+settings:
+  cleanupHtml: ''
+  columnType: text
+  configFile: Standard.json
+  purifyHtml: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

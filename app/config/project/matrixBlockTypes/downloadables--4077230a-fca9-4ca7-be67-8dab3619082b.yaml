@@ -1,0 +1,99 @@
+field: cfd48b47-428e-4acd-a468-ada283499580
+fieldLayouts:
+  a14da32a-fecf-4694-a135-9de439a0140e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: db29bc73-7aaf-4cfb-8c13-c3e0aa1d3098
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b56df1b5-4b82-4759-a75f-cc72c304efb5
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  b56df1b5-4b82-4759-a75f-cc72c304efb5:
+    contentColumnType: string
+    fieldGroup: null
+    handle: publicationFile
+    instructions: 'Downloadable publication file. Preferably a PDF, Powerpoint or Word document'
+    name: 'Publication File'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - pdf
+        - powerpoint
+        - word
+      defaultUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add a downloadable publication file'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:fb2ec036-ec9c-418f-a89c-5ea7481521ca'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  db29bc73-7aaf-4cfb-8c13-c3e0aa1d3098:
+    contentColumnType: string
+    fieldGroup: null
+    handle: coverImage
+    instructions: 'Cover image for publication. Preferably the first page of the publication'
+    name: 'Cover Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+      defaultUploadLocationSubpath: publication-covers
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add publication cover image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: downloadables
+name: Downloadables
+sortOrder: 1

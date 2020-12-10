@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: workingWithUs
+instructions: ''
+name: 'Working With Us'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 28647ec9-0697-41f9-b9e5-b9f3676a8431
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2536fd30-605a-46e1-a85f-cc12ce771b9d
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_workingwithus}}'
+  fieldLayout: matrix
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

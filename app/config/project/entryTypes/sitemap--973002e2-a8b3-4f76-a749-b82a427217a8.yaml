@@ -1,0 +1,21 @@
+fieldLayouts:
+  2cf83806-987b-4410-8ebe-65ddf866ec96:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 1
+handle: sitemap
+hasTitleField: false
+name: Sitemap
+section: 301dc578-f6a4-4383-a91a-df7062d94787
+sortOrder: 0
+titleFormat: '{section.name|raw}'

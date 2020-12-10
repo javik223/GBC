@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: teamLanding
+name: 'Team Landing'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  3e993b0c-6b63-496e-9fa9-e9dbb42c592b:
+    enabledByDefault: true
+    hasUrls: true
+    template: team/index
+    uriFormat: team
+type: single

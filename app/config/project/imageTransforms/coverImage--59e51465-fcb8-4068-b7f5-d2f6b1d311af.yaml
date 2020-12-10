@@ -1,0 +1,9 @@
+format: null
+handle: coverImage
+height: 400
+interlace: partition
+mode: crop
+name: 'Cover Image'
+position: center-center
+quality: 82
+width: 291

@@ -1,0 +1,41 @@
+contentColumnType: string
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: ourPracticeSummary
+instructions: ''
+name: 'Our Practice Summary'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 2262996a-8d2d-480e-a5f7-b14c4b532400
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e54546b7-480c-445d-b67d-1d4a0d48f18a
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 77bb3dc4-b23b-45cd-b10f-42c38355c06d
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_ourpracticesummary}}'
+  fieldLayout: matrix
+  maxRows: '1'
+  minRows: '1'
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,71 @@
+{% extends '_layout' %}
+{% block content %}
+	
+	<div class="container container-extra-pad">
+		<div class="text-center smaller">CASES &amp; RESULTS</div>
+
+		<div class="row mt-pad">
+			<div class="col m-3-12 s-hide">
+				<a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="col m-6-12">
+				<h1 class="c-p beta text-center nmb">{{ entry.title }}</h1>
+			</div>
+
+			{% set casesAndResults = craft.entries.section('casesAndResults') %}
+			{% if casesAndResults|length %}
+				<div class="col m-3-12 s-hide dropdown-wrapper dropdown-wrapper-right">
+					<a href="#" class="button right">Jump to Case &amp; Result<span class="icon icon-caret-right"></span></a>
+
+					<ul class="dropdown jsDropDown">
+						{% for caseAndResult in casesAndResults %}
+						    <li><a href="{{ caseAndResult.url() }}" title="{{ caseAndResult.title }}">{{ caseAndResult.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="container container-extra-pad container-gray">
+		<div class="row mt-pad">
+			<div class="col m-3-12 l-3-12 end">
+				{% if entry.thumbnail|length %}
+				<div class="col s-6-12 m-12-12">
+					<img src="{{ entry.thumbnail.one().url() }}" alt="{{ entry.title }}" class="cases-side-image">
+					<p class="nmb">&nbsp;</p>
+				</div>
+				{% endif %}
+
+				<div class="col s-6-12 m-12-12 cases-details">
+					{% if entry.client %}
+						<div>
+							<p class="nmb text-sans">Client</p>
+							<p class="text-sans">{{ entry.client }}</p>
+						</div>
+					{% endif %}
+
+
+					{% if entry.suitDetail %}
+						<div>
+							<p class="nmb text-sans">Suit Details</p>
+							<p class="text-sans">{{ entry.suitDetail }}</p>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="col m-8-12 l-6-12">
+				<h3 class="nmb">Overview</h3>
+				{{ entry.overview }}
+
+				<h3 class="nmb">Solution</h3>
+				{{ entry.solution }}
+
+				<h3 class="nmb">Benefits</h3>
+				{{ entry.benefit }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

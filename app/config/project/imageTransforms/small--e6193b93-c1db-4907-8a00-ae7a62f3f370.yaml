@@ -1,0 +1,9 @@
+format: null
+handle: small
+height: 300
+interlace: none
+mode: crop
+name: Small
+position: center-center
+quality: 60
+width: 300

@@ -1,0 +1,4 @@
+{% macro generateThumbnail(image, class) %}
+  	<img {% if class | length %}class="{{ class }}"{% endif %}
+     src="{{ image.url('profile') }}" alt="{{ image.title }}" property="image">
+{% endmacro %}

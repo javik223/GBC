@@ -1,0 +1,32 @@
+contentColumnType: text
+fieldGroup: 61184f31-482d-4875-9ff8-bc9e92525667
+handle: memberships
+instructions: ''
+name: Memberships
+searchable: true
+settings:
+  addRowLabel: 'Add membership'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Item
+            -
+              - handle
+              - item
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  maxRows: ''
+  minRows: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

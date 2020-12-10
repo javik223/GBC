@@ -1,0 +1,29 @@
+fieldLayouts:
+  fc3db657-4cc7-490e-8952-9867136b3cf5:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: f5a89f85-3fe1-41fd-9951-e40147c0d889
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 2
+handle: homepage
+hasTitleField: true
+name: Homepage
+section: 8cae83cc-de9e-44a1-ae11-b58ac1a58b75
+sortOrder: 0
+titleFormat: null

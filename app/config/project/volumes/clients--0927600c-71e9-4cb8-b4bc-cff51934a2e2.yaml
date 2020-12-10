@@ -1,0 +1,9 @@
+handle: clients
+hasUrls: true
+name: Clients
+settings:
+  path: assets/images/clients/
+  url: /assets/images/clients/
+sortOrder: 2
+type: craft\volumes\Local
+url: null

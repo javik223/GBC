@@ -1,0 +1,21 @@
+fieldLayouts:
+  6285583f-a7db-47d5-bf72-fe28ff847fba:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 1
+handle: newsLanding
+hasTitleField: true
+name: 'News Landing'
+section: a4d3fb16-ed3e-4b7d-9f22-fff8de890acb
+sortOrder: 0
+titleFormat: null

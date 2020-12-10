@@ -1,0 +1,29 @@
+fieldLayouts:
+  f0f524d9-97c0-4a63-8013-d11ff567bad5:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: fdb104fd-ff62-4ed6-8ab1-66919874710d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 2
+handle: siteCredits
+hasTitleField: false
+name: 'Site Credits'
+section: 1d555251-3e03-4469-9e0a-37cbaca23d2b
+sortOrder: 0
+titleFormat: '{section.name|raw}'

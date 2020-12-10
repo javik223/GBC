@@ -1,0 +1,30 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="container container-gray container-extra-pad careers position-relative">
+		<div class="grid-container">
+			<div class="grid-x">
+				<div class="cell medium-6 large-5">
+					<h1 class="beta c-p mt-pad">{{ entry.title }}</h1>
+					<div class="side-image-wrapper">
+					<img src="{{ entry.image.one().url() }}" alt="{{ entry.title }}"></div>
+					<div class="content mt-pad">
+						{{ entry.bodyContent }}
+						
+						{# <div class="section__cta">
+							<div class="section--xsmall">
+								<a class="button" href="#">
+									<span class="icon icon-caret-left"></span>Open
+										                Opportunities</a>
+							</div>
+							<div>
+								<a class="button" href="#">
+									<span class="icon icon-caret-left"></span>Internship</a>
+							</div>
+						</div> #}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

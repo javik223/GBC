@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: en_us
+hasUrls: true
+language: en-US
+name: 'Gbenga Biobaku & Co. (GBC) (en-US)'
+primary: true
+siteGroup: f9cd3c1b-0371-4151-8c60-d394e50f5e45
+sortOrder: 1

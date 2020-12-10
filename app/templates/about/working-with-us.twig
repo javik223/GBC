@@ -1,0 +1,24 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="grid-container container-extra-pad">
+		<div class="grid-x mt-pad">
+			<div class="cell medium-4 s-hide">
+				<a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="cell medium-4 end">
+				<h1 class="c-p beta text-center nmb">{{ entry.title }}</h1>
+			</div>				
+		</div>
+	</div>
+
+	<div class="container container-gray container-extra-pad">
+		<div class="grid-x mt-pad">
+			<div class="cell medium-8 large-6 medium-offset-2 large-offset-3 text-center end">
+				{{ entry.bodyContent }}
+			</div>
+		</div>
+	</div>
+
+<div class="pbb">&nbsp;</div>
+{% endblock %}

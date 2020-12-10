@@ -1,0 +1,53 @@
+{% extends '_layout' %}
+{% block content %}
+	<div class="grid-container full container-extra-pad container-gray">
+		<div class="grid-container">
+			<div class="grid-x mt-pad">
+				<div class="cell medium-3 s-hide">
+					<a href="#" class="button prevPageBtn">
+						<span class="icon icon-caret-left"></span>Previous Page</a>
+				</div>
+				<div class="cell medium-6 end">
+					<h1 class="c-p beta text-center nmb">News</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% paginate craft.entries({
+		section: 'news',
+		limit: 8
+	}) as newsInfo, newsEntries %}
+	{% do seomatic.helper.paginate(newsInfo) %}
+
+		{% if newsEntries | length %}
+			<div class="grid-container full container-gray">
+				<div class="grid-container">
+					<div class="news-container">
+						{% for newsItem in newsEntries %}
+							<div>
+								<h2 class="text-sans">{{ newsItem.title }}</h2>
+								<p>{{ newsItem.overview }}</p>
+
+								<a class="button button-large" href="{{ newsItem.url() }}">Read More
+									<span class="icon icon-caret-right"></span>
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="cell text-center pbb">
+					{% if newsInfo.prevUrl %}
+						<a class="button" href="{{ newsInfo.prevUrl }}">
+							<span class="icon icon-caret-left"></span>Previous News Items</a>
+					{% endif %}
+					{% if newsInfo.nextUrl %}
+						<a class="button" href="{{ newsInfo.nextUrl }}">Next News Items
+							<span class="icon icon-caret-right"></span>
+						</a>
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+	{% endblock %}

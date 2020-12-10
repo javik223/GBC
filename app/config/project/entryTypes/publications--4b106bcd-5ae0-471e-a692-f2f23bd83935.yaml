@@ -1,0 +1,96 @@
+fieldLayouts:
+  3d7312fb-1423-40da-ba22-94829a7cba93:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2d0c59db-eb24-457e-8e86-e48aa7296bc4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 813c7062-88b7-4971-a7e4-2120e836d3f0
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 23cbf150-4273-4fa1-80b6-5562334402b9
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cfd48b47-428e-4acd-a468-ada283499580
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4b457b37-eeb9-4c0b-b9ed-7ad9b1645cfb
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Publications
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Seo
+        sortOrder: 2
+handle: publications
+hasTitleField: true
+name: Publications
+section: bac84135-bbda-4d7f-8547-87a3f9f393aa
+sortOrder: 0
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

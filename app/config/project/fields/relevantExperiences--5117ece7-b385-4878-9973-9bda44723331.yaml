@@ -1,0 +1,28 @@
+contentColumnType: text
+fieldGroup: f7f0a86b-72f3-4d8b-b7dc-63c89d9bf313
+handle: relevantExperiences
+instructions: ''
+name: 'Relevant Experiences'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - handle
+              - item
+            -
+              - heading
+              - Item
+            -
+              - type
+              - singleline
+            -
+              - width
+              - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

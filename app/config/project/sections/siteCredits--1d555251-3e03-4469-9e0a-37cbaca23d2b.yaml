@@ -1,0 +1,15 @@
+enableVersioning: true
+handle: siteCredits
+name: 'Site Credits'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  3e993b0c-6b63-496e-9fa9-e9dbb42c592b:
+    enabledByDefault: true
+    hasUrls: true
+    template: site-credits
+    uriFormat: site-credits
+type: single

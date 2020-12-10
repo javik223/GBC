@@ -1,0 +1,142 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="grid-container container-extra-pad">
+		<div class="grid-x mt-pad">
+			<div class="cell medium-3 s-hide">
+				<a href="#" class="button prevPageBtn">
+					<span class="icon icon-caret-left"></span>Previous Page</a>
+			</a>
+		</div>
+		<div class="cell medium-6">
+			<h1 class="c-p beta text-center nmb">The Team</h1>
+		</div>
+
+		{% set teamMembers = craft.entries.section('team') %}
+		{% if teamMembers|length %}
+			<div class="cell medium-3 s-hide dropdown-wrapper dropdown-wrapper-right">
+				<a href="#" class="button right">Jump to Team Member<span class="icon icon-caret-right"></span>
+				</a>
+
+				<ul class="dropdown jsDropDown">
+					{% for member in teamMembers %}
+						<li>
+							<a href="{{ member.url() }}" title="{{ member.title }}">{{ member.title }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+	</div>
+</div>
+<div class="grid-container container-gray container-extra-pad full position-relative">
+	<div class="grid-container">
+		<div class="grid-x">
+			<div class="cell mt-pad">
+				<h1 class="nmb text-serif beta">{{ entry.title }}</h1>
+				<p class="text-sans">{{ entry.position|upper }}</p>
+			</div>
+			<div class="cell large-6">
+				<div class="side-content"><img src="{{ entry.image.one().url() }}" alt="{{ entry.title }}"></div>
+				<div class="content mt-pad">
+					<p class="pbb">&nbsp;</p>
+					<p class="omega text-serif pbb">{{ entry.intro }}</p>
+
+					{# Education #}
+					{% set education = entry.education %}
+					{% if education|length %}
+						<h3 class="gamma">Education</h3>
+						<ul class="list list-dash">
+							{% for row in education %}
+								<li>{{ row.item }}</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					{# /Education #}
+
+					{# Expertise #}
+					<div class="grid-x">
+						{% set expertise = entry.expertise %}
+						{% if expertise|length %}
+							<div class="cell-medium-6">
+								<h3 class="gamma">Expertise</h3>
+								<ul class="list list-dash">
+									{% for row in expertise %}
+										<li>{{ row.item }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						{% endif %}
+
+						{# Memberships #}
+						{% set memberships = entry.memberships %}
+						{% if memberships|length %}
+							<div class="cell medium-6">
+								<h3 class="gamma">Memberships</h3>
+								<ul class="list list-dash">
+									{% for row in memberships %}
+										<li>{{ row.item }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						{% endif %}
+
+						{# Consultancy Records #}
+						{% set consultancyRecord = entry.consultancyRecord %}
+
+						{% if consultancyRecord|length %}
+							<div class="cell medium-6">
+								<h3 class="gamma">Consultancy Record</h3>
+								<ul class="list list-dash">
+									{% for row in consultancyRecord %}
+										<li>{{ row.item }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						{% endif %}
+
+						{# Languages #}
+						{% set language = entry.languages %}
+
+						{% if language|length %}
+							<div class="cell medium-6">
+								<h3 class="gamma">Languages</h3>
+								<ul class="list list-dash">
+									{% for row in language %}
+										<li>{{ row.item }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{# Select Experiences #}<div class="grid-container container-extra-pad">
+	<div class="grid-x">
+		<div class="cell medium-8 text-sans">
+			{% set experiences = entry.experiences %}
+			{% if experiences | length %}
+				<h1 class="gamma">Select Experiences</h1>
+
+				{% for row in experiences %}
+					<p>{{ row.item }}</p>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+
+	{# Appointments #}
+	<div class="grid-x">
+		<div class="cell medium-8 text-sans">
+			{% set appointment = entry.appointments %}
+			{% if appointment | length %}
+				<h1 class="gamma">Appointments</h1>
+
+				{{ appointment }}
+			{% endif %}
+		</div>
+	</div>
+</div>{% endblock %}

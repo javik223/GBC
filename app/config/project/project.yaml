@@ -1,22 +1,78 @@
-dateModified: 1603481466
+dateModified: 1607547249
 email:
   fromEmail: javik@live.com
-  fromName: 'Lagos Fashion Week'
+  fromName: 'Gbenga Biobaku & Co. (GBC)'
+  template: null
   transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 plugins:
+  am-nav:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
   blitz:
     edition: standard
     enabled: true
     schemaVersion: 3.6.6
-  calendar:
-    edition: pro
-    enabled: true
-    schemaVersion: 3.1.0
-  colorit:
+    settings:
+      apiKey: ''
+      cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
+      cacheDuration: null
+      cacheElementQueries: true
+      cacheElements: true
+      cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
+      cacheStorageSettings:
+        __assoc__:
+          -
+            - folderPath
+            - '@webroot/cache/blitz'
+          -
+            - createGzipFiles
+            - ''
+      cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cacheWarmerSettings:
+        __assoc__:
+          -
+            - concurrency
+            - '3'
+      cacheWarmerType: putyourlightson\blitz\drivers\warmers\GuzzleWarmer
+      cachingEnabled: '1'
+      clearCacheAutomatically: '1'
+      customSiteUris: ''
+      debug: false
+      deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
+      driverJobPriority: 100
+      excludedQueryStringParams:
+        - gclid
+        - fbclid
+      excludedUriPatterns: ''
+      includedUriPatterns: ''
+      injectScriptEvent: DOMContentLoaded
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
+        - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
+      mutexTimeout: 1
+      outputComments: true
+      queryStringCaching: '0'
+      refreshCacheAutomaticallyForGlobals: true
+      refreshCacheJobPriority: 10
+      refreshCacheWhenElementSavedNotLive: false
+      refreshCacheWhenElementSavedUnchanged: false
+      sendPoweredByHeader: true
+      warmCacheAutomatically: '1'
+  cloner:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.3
-  embeddedassets:
+    schemaVersion: 1.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  cp-field-inspect:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -24,55 +80,130 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  freeform:
-    edition: pro
-    enabled: true
-    schemaVersion: 3.0.8
-  icon-picker:
+  image-optimize:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.1
+    schemaVersion: 1.0.0
   imager-x:
-    edition: pro
+    edition: lite
     enabled: true
     schemaVersion: 3.0.0
-  linkit:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.8
+  minify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
   navigation:
     edition: standard
     enabled: true
     schemaVersion: 1.0.21
-  neo:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.8.0
+    settings:
+      bypassProjectConfig: false
+      pluginName: Navigation
+      propagateSiteElements: true
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  retour:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.9
   seomatic:
     edition: standard
     enabled: true
     schemaVersion: 3.0.9
+  simple-sharing:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sitemap:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      sections:
+        1:
+          changefreq: weekly
+          priority: '1.0'
+        4:
+          changefreq: weekly
+          priority: '0.5'
+        5:
+          changefreq: weekly
+          priority: '0.5'
+        7:
+          changefreq: weekly
+          priority: '0.5'
+        8:
+          changefreq: weekly
+          priority: '0.5'
+        9:
+          changefreq: weekly
+          priority: '0.5'
+        11:
+          changefreq: weekly
+          priority: '0.5'
+        12:
+          changefreq: weekly
+          priority: '0.5'
+        13:
+          changefreq: weekly
+          priority: '0.5'
+        14:
+          changefreq: weekly
+          priority: '0.5'
+        15:
+          changefreq: weekly
+          priority: '0.5'
+        16:
+          changefreq: weekly
+          priority: '0.5'
+        17:
+          changefreq: weekly
+          priority: '0.5'
   super-table:
     edition: standard
     enabled: true
     schemaVersion: 2.2.1
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+routes:
+  1:
+    siteUid: null
+    sortOrder: 1
+    template: about
+    uriParts:
+      - about
+      -
+        - page
+        - \d+
+    uriPattern: 'about<page:\d+>'
+  2:
+    siteUid: null
+    sortOrder: 2
+    template: /expertise
+    uriParts:
+      - commercial.html
+    uriPattern: commercial.html
+  760b197b-fa74-40e5-b516-053bebb69b26:
+    siteUid: null
+    sortOrder: 2
+    template: /expertise
+    uriParts:
+      - commercial.html
+    uriPattern: commercial\.html
+  ea8b0d39-ed7e-445a-9670-61e889582d5b:
+    siteUid: null
+    sortOrder: 1
+    template: about
+    uriParts:
+      - about
+      -
+        - page
+        - \d+
+    uriPattern: 'about(?P<page>\d+)'
 system:
   edition: pro
   live: true
-  name: 'Lagos Fashion Week'
+  name: 'Gbenga Biobaku & Co. (GBC)'
   schemaVersion: 3.5.13
-  timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true
+  timeZone: UTC

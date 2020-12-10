@@ -1,0 +1,15 @@
+enableVersioning: true
+handle: sitemap
+name: Sitemap
+previewTargets:
+  -
+    label: 'Primary entry page'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  3e993b0c-6b63-496e-9fa9-e9dbb42c592b:
+    enabledByDefault: true
+    hasUrls: true
+    template: sitemap
+    uriFormat: sitemap
+type: single

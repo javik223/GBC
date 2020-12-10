@@ -1,0 +1,28 @@
+handle: footer1
+instructions: ''
+maxNodes: ''
+name: 'Footer 1'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  3e993b0c-6b63-496e-9fa9-e9dbb42c592b: null
+sortOrder: 2
+structure:
+  maxLevels: '1'
+  uid: a37f3e03-fb66-4661-9415-c744967ad555

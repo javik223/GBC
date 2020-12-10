@@ -1,0 +1,37 @@
+fieldLayouts:
+  53ccb84f-8be3-452e-ac39-5c6127d05c3f:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: c3a37810-2e40-402b-895b-7d7826eee991
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 0400679b-7d04-458f-9fd2-d27cc7e9f168
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 4b457b37-eeb9-4c0b-b9ed-7ad9b1645cfb
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: News
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 2
+handle: news
+hasTitleField: true
+name: News
+section: f6edeabb-739c-465d-ac1d-d4da9a7e057b
+sortOrder: 0
+titleFormat: null

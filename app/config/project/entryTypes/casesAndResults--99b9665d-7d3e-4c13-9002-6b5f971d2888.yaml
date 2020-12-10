@@ -1,0 +1,53 @@
+fieldLayouts:
+  5e24575f-9c7f-45eb-b4ee-e35230e53500:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: c8eb552f-58f1-496e-84c6-e0a8357ccf23
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e428af9a-9a70-4e6b-8646-e9fa89169b1e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 29df698e-c607-436f-8a6f-61f3ec6b3e7b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 4292df84-16bf-4fa0-8a46-15334e582588
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c3a37810-2e40-402b-895b-7d7826eee991
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 4912d767-25ed-4a84-bf49-a6075a976e9d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b2d80392-03bc-437f-b46c-4bd7c49a248e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Cases and Results'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 2
+handle: casesAndResults
+hasTitleField: true
+name: 'Cases and Results'
+section: e433eb31-1526-4021-8297-76b64067fc32
+sortOrder: 0
+titleFormat: null

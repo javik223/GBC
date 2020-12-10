@@ -1,0 +1,42 @@
+{% extends '_layout' %}
+{% block content %}
+	
+	<div class="container container-extra-pad container-gray">
+		<div class="row mt-pad">
+			<div class="col m-3-12 s-hide">
+				<a href="#" class="button prevPageBtn"><span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="col m-6-12">
+				<h1 class="c-p beta text-center nmb">Cases &amp; Results</h1>
+			</div>
+
+			{% set casesAndResults = craft.entries.section('casesAndResults') %}
+			{% if casesAndResults|length %}
+				<div class="col m-3-12 s-hide dropdown-wrapper dropdown-wrapper-right">
+					<a href="#" class="button right">Jump to Case &amp; Result<span class="icon icon-caret-right"></span></a>
+
+					<ul class="dropdown jsDropDown">
+						{% for caseAndResult in casesAndResults %}
+						    <li><a href="{{ caseAndResult.url() }}" title="{{ caseAndResult.title }}">{{ caseAndResult.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="container cases">
+		{% set casesAndResults = craft.entries.section('casesAndResults') %}
+		{% for item in casesAndResults %}
+		    <a class="case" href="{{ item.url() }}">
+		    	<h1 class="case_title">{{ item.title }}</h1>
+		    	{% if item.client|length %}
+					<h2 class="case_client">{{ item.description }}</h2>		
+		 	   	{% endif %}
+		 
+		    	<div class="case_view">View Case Study <span class="icon icon-caret-right"></span></div>
+		    </a>
+		{% endfor %}
+	</div>
+{% endblock %}

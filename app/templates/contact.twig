@@ -1,0 +1,14 @@
+{% extends '_layout' %}
+
+{% block content %}
+<div class="grid-container full contact" style="background-image: url({{ entry.image.one().url() }}); background-repeat: no-repeat; background-size: cover;">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell content medium-6">
+        <h1 class="beta c-p">	{{ entry.title }}</h1>
+        {{ entry.bodyContent }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

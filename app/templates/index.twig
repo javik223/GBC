@@ -1,2 +1,122 @@
-{% extends "_layout" %} {% block content %} {% include "_page-blocks/_sponsors"
-%} {% endblock %}
+{% extends '_layout' %}
+{% css "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" %}
+{% css "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" %}
+
+{% set e = craft.entries({
+	section: 'aboutGBC'
+}).one() %}
+
+{% block content %}
+	<div class="hero hero-slider">
+		<div class="hero-slider_fixed-content">
+			<div class="grid-container">
+				<div class="grid-x mt-pad">
+					<h1 class="cell medium-11 large-6">A modern law firm with a flair for business</h1>
+				</div>
+			</div>
+		</div>
+		{% set banners = entry.banners %}
+		{% if banners|length %}
+			<div class="hero-slider_container cycle-slideshow" data-cycle-slides=".hero-slider_item">
+				{% for image in banners %}
+					<div class="hero-slider_item">
+						<img src="{{ image.url() }}" alt="{{ image.title }}">
+					</div>
+				{% endfor %}
+				<div class="cycle-pager"></div>
+			</div>
+		{% endif %}
+	</div>
+
+	{# Our Practice #}
+	{% set ourPracticeSummary = e.ourPracticeSummary %}
+	{% if ourPracticeSummary | length %}
+	<div class="grid-container section--large position-relative striped-background full practice-intro">
+		<div class="grid-container">
+			<div class="grid-x">
+				<div class="cell medium-10 large-8 end section--large-padding">
+					<h3 class="color-dark-gray text-sans">{{ ourPracticeSummary.body | striptags | raw }}</h3>
+					{% set icons = ourPracticeSummary.icons.all() %}
+					{% if icons | length %}
+						<div class="grid-x grid-margin-y bio__icons small-up-3 large-up-6 section--medium">
+							{% for icon in icons %}
+								<div class="cell bio__icon-wrapper">
+									<img src="{{ icon.url() }}" alt="{{ icon.title }}">
+								</div>
+							{% endfor %}
+						</div>
+						{% set practiceAreaLink = ourPracticeSummary.practiceLink %}
+						<div class="section__cta">
+							<a href="{{ practiceAreaLink.url() }}" class="button">
+								<span class="icon icon-caret-left"></span>
+								{{ practiceAreaLink.title }}</a>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+	{% endif %}
+
+
+	{# Publications #}
+	{% set publications = craft.entries({
+		section: 'publications',
+		limit: '3'
+	}) %}
+	{% if publications | length %}
+		<section class="grid-container section--large publication-area">
+			<h1 class="c-p beta text-center nmb section--medium">Latest Publications</h1>
+			<div class="grid-x grid-margin-x section--medium">
+				{% for publication in publications %}
+					{% set featuredImage = publication.featuredImage.one() %}
+					<div class="cell medium-6 large-4">
+						<a href="{{ publication.url }}">
+							<article class="publication">
+								<div class="publication__image-wrapper">
+									{% if featuredImage | length %}
+										<img src="{{ featuredImage.url('publicationThumbnail') }}" alt="{{ publication.title }}">
+									{% else %}
+										<img src="/assets/images/empty-state.svg" alt="{{ publication.title }}"/>
+
+									{% endif %}
+								</div>
+								<p class="publication__content">{{ publication.title }}</p>
+							</article>
+						</a>
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="section__cta text-center">
+				<a href="/publications" class="button">
+					<span class="icon icon-caret-left"></span>See all publications</a>
+			</div>
+		</section>
+	{% endif %}
+	{# / Publications #}
+
+	{# Clients #}
+	{% set e = craft.entries({
+		section: 'aboutGbc'
+	}).one() %}
+	{% set clients = e.clients.all() %}
+	{% if clients | length %}
+		<section class="grid-container section--large clients-area">
+			<h2 class="c-p beta text-center nmb">Our Clients</h2>
+			<div class="grid-x align-center section--small">
+				<p class="cell medium-6 text-center text-sans">{{ e.clientsText | striptags }}</p>
+			</div>
+
+			<div class="clients-carousel js-clients-carousel text-center">
+				{% for client in clients %}
+					<div class="clients-carousel__slide">
+						<img src="{{ client.clientLogo.one().url() }}" alt="{{ client.clientName }}"/>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+	{% endif %}
+	{# /Clients #}
+
+{% endblock %}

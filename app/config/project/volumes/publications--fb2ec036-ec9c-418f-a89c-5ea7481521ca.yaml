@@ -1,0 +1,9 @@
+handle: publications
+hasUrls: true
+name: Publications
+settings:
+  path: assets/publications/
+  url: /assets/publications/
+sortOrder: 4
+type: craft\volumes\Local
+url: null

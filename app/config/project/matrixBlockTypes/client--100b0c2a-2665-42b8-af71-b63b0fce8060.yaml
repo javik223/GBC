@@ -1,0 +1,58 @@
+field: 9bcd7ec5-7e2d-4f6f-bff5-fd11e3677be5
+fieldLayouts:
+  27c1fad8-e2d0-4d9f-82df-4f2297b579e0:
+    tabs:
+      -
+        fields:
+          4f6d577e-5b5e-4bbf-be1d-1a4e974e35d0:
+            required: true
+            sortOrder: 2
+          bcdb2bb2-f223-4d63-82e1-19b6ed0f6a75:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  4f6d577e-5b5e-4bbf-be1d-1a4e974e35d0:
+    contentColumnType: string
+    fieldGroup: null
+    handle: clientLogo
+    instructions: 'Upload client logo'
+    name: 'Client Logo'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Upload Logo'
+      singleUploadLocationSource: 'volume:0927600c-71e9-4cb8-b4bc-cff51934a2e2'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: '1'
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  bcdb2bb2-f223-4d63-82e1-19b6ed0f6a75:
+    contentColumnType: text
+    fieldGroup: null
+    handle: clientName
+    instructions: 'Name of client. e.g. Exxon Mobil'
+    name: 'Client Name'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: client
+name: Client
+sortOrder: 1

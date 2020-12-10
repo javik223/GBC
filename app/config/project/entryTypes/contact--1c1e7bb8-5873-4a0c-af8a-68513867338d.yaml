@@ -1,0 +1,33 @@
+fieldLayouts:
+  a6cf1f03-c869-4bcc-83a3-f2c9a6ff5ec2:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: ''
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 213c62f5-0e14-4bd7-89fd-d8555f5fef5b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: fdb104fd-ff62-4ed6-8ab1-66919874710d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 2
+handle: contact
+hasTitleField: true
+name: Contact
+section: 5c2ea6c4-cc25-49ad-bbd2-1264ac6a3b61
+sortOrder: 0
+titleFormat: null

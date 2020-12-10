@@ -1,0 +1,9 @@
+handle: team
+hasUrls: true
+name: Team
+settings:
+  path: assets/images/team/
+  url: /assets/images/team/
+sortOrder: 3
+type: craft\volumes\Local
+url: null

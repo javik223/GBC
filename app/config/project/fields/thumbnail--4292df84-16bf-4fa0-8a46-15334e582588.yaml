@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: thumbnail
+instructions: ''
+name: Thumbnail
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:cd06de6b-6e7e-42b7-ade1-af0e3d226f1b'
+  singleUploadLocationSubpath: ''
+  sources: '*'
+  useSingleFolder: '1'
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

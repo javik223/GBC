@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: clientsText
+instructions: ''
+name: 'Clients Text'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: b540c05b-e4f0-4b09-8fbc-4e1b061db263
+handle: publicationDownload
+instructions: ''
+name: 'Publication Download'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_publicationdownload}}'
+  maxBlocks: ''
+  minBlocks: '1'
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

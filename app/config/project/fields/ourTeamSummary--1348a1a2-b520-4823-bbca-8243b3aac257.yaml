@@ -1,0 +1,41 @@
+contentColumnType: string
+fieldGroup: 48fce0ca-0fdc-4329-9939-5cf39c034bcf
+handle: ourTeamSummary
+instructions: ''
+name: 'Our Team Summary'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - d5e6292c-e2b2-471c-9bd3-d159b48850a6
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ce003d51-e7c9-441d-82f9-f3ed56f42b38
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - a1881a6d-f2d3-4f62-9519-507442a3ad21
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_ourteamsummary}}'
+  fieldLayout: matrix
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

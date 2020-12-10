@@ -1,0 +1,41 @@
+fieldLayouts:
+  a11b34e6-942e-4df7-83ec-ce216a1ee23a:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: f0fccd16-a742-4c23-9875-76d095dccb0e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f9d47b03-1903-40de-8791-c3b26f49d080
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5117ece7-b385-4878-9973-9bda44723331
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 80a77411-0841-4839-95c8-926b5e3ffbfc
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Expertise
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8a1c1e99-fcfd-4d7d-bb43-4856928f370c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Seo
+        sortOrder: 2
+handle: expertise
+hasTitleField: false
+name: Expertise
+section: 9a2bd9ef-be9e-4063-ab14-f4b81b216a6a
+sortOrder: 0
+titleFormat: '{section.name|raw}'

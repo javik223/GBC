@@ -1,0 +1,97 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="grid-container container-extra-pad">
+		<div class="grid-x mt-pad">
+			<div class="cell medium-4 s-hide">
+				<a href="#" class="button prevPageBtn">
+					<span class="icon icon-caret-left"></span>Previous Page</a>
+			</div>
+			<div class="cell medium-4 end">
+				<h1 class="c-p beta text-center nmb">Sitemap</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-container container-gray container-extra-pad full">
+		<div class="grid-x text-center">
+			<div class="cell medium-8 medium-offset-2">
+				<ul class="site-links list">
+					<li>
+						<a href="/" title="GBC Homepage">Home</a>
+					</li>
+					<li>
+						<a href="/about" title="About Gbenga Biobaku &amp; Co (GBC)">About GBC</a>
+					</li>
+					<li>
+						<a href="/" title="GBC Homepage">The Team</a>
+
+						{% set team = craft.entries.section('team').all() %}
+						{% if team | length %}
+							<ul>
+							{% for member in team %}
+								<li>
+									<a href="{{ member.url() }}" title="{{ member.title }}">{{ member.title }}</a>
+								</li>
+							{% endfor %}
+							</ul>
+						{% endif %}
+					</li>
+				</li>
+				<li>
+					<a href="/expertise" title="GBC's Expertise">Expertise</a>
+					{% set expertise = craft.entries.section('expertise').one() %}
+					{% if expertise|length %}
+						<ul>
+							{% set expertise = expertise.Ex %}
+
+							{% for item in expertise %}
+								<li>
+									<a href="/expertise#{{ item.exTitle|striptags|replace({'&': '', ' ': '-'}) }}" title="{{ item.exTitle }}">{{ item.exTitle }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+				<li>
+					<a href="/publications" title="Publications">Publications</a>
+					{% set publications = craft.entries.section('publications') %}
+
+					{% if publications|length %}
+						<ul>
+							{% for item in publications %}
+								<li>
+									<a href="{{ item.url() }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+
+				<li>
+					<a href="/news" title="News">News</a>
+					{% set news = craft.entries.section('news') %}
+
+					{% if news|length %}
+						<ul>
+							{% for item in news %}
+								<li>
+									<a href="{{ item.url() }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+
+				<li>
+					<a href="/contact" title="Contact GBC">Contact</a>
+				</li>
+				<li>
+					<a href="/careers" title="Careers at GBC">Careers</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="pbb">&nbsp;</div>{% endblock %}

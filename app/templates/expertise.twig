@@ -1,0 +1,61 @@
+{% extends '_layout' %}
+{% block content %}
+	<div class="container container-extra-pad">
+		<div class="pbb"></div>
+		<div class="grid-x">
+			<div class="cell large-8 large-offset-2 text-center grid-x pbb">
+				<h1 class="h4 text-serif medium-8 medium-offset-2 mt-pad pbb">{{ entry.intro|striptags }}</h1>
+				<div class="grid-x">
+					{% set expertise = entry.Ex.all() %}
+					{% for expertise in expertise %}
+						<div class="accordion" id="{{ expertise.exTitle|striptags|replace({'&': '', ' ': '-'}) }}">
+							<h1 class="accordion_header">{{ expertise.exTitle }}<span class="icon icon-open icon-open-alt"></span>
+							</h1>
+							<div class="accordion_content">
+								{% set image = expertise.image.one() %}
+								{% if image | length %}
+									<div class="banner-image">
+										<img src="{{ image.url() }}" alt="{{ image.title }}" style="width: 100%;">
+									</div>
+								{% endif %}
+								<div class="body color-dark-gray">
+									{{ expertise.exContent }}
+
+									{% set areasOfInterest = expertise.exAreasOfInterest %}
+									{% if areasOfInterest|length %}
+										<section class="areas-of-interest">
+											<h3 class="heading">Practice Areas</h3>
+											<ul class="list">
+												{% for row in areasOfInterest %}
+													<li>{{ row.item }}</li>
+												{% endfor %}
+											</ul>
+										</section>
+									{% endif %}
+
+									{% set repTransactions = expertise.exRepTransactions %}
+									{% if repTransactions|length %}
+										<section>
+											<h3 class="heading c-p areas-of-interest">Selected Representative Transactions</h3>
+											<p>
+												<em>*This includes transactions handled by members of the firm prior to joining the firm.</em>
+											</p>
+											<ul class="list list-arrow list-experiences">
+												{% for row in repTransactions %}
+													<li>{{ row.item }}</li>
+												{% endfor %}
+											</ul>
+										</section>
+									{% endif %}
+								</div>
+							</div>
+
+						</div>
+					{% endfor %}
+
+						<div class="pbb"></div>
+						
+				</div>
+			</div>
+		</div>
+	{% endblock %}
